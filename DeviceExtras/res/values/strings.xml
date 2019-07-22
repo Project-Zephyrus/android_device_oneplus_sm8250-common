@@ -166,4 +166,11 @@
     <string name="category_vibrator">Vibrator</string>
     <string name="vib_strength_title">System strength</string>
     <string name="vib_strength_summary">Define the intensity of the vibrator</string>
+
+    <!-- Dolby -->
+    <string name="dolby_category">Dolby</string>
+    <string name="dolby_title">Dolby Atmos</string>
+    <string name="dolby_summary">Configure the audio output based on media content</string>
+    <string name="dolby_info">When enable/disable Dolby Atmos, pause/play media for changes to take effect.</string>
+
 </resources>
