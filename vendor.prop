@@ -126,6 +126,9 @@ ro.soc.model=SM8250
 ro.crypto.allow_encrypt_override=true
 ro.crypto.volume.filenames_mode=aes-256-cts
 
+# Dalvik dex2oat
+dalvik.vm.dex2oat64.enabled=true
+
 # Display
 ro.vendor.display.sensortype=2
 vendor.display.comp_mask=0
