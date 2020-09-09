@@ -234,6 +234,7 @@ on property:sys.shutdown.requested=*
 #rowan.jia@MM.Display, 2020/02/11, add for ltm licenses
 #ifdef/* VENDOR_EDIT */
 on property:sys.boot_completed=1
+    swapon_all /vendor/etc/fstab.qcom
     copy /vendor/etc/OnePlus_QC_LTM_Commercial_SM8250_2020_02_07.pfm /mnt/vendor/persist/data/pfm/licenses/1000-1000-no-exp-2013248336.pfm
     chmod 0600 /mnt/vendor/persist/data/pfm/licenses/1000-1000-no-exp-2013248336.pfm
     chown system system /mnt/vendor/persist/data/pfm/licenses/1000-1000-no-exp-2013248336.pfm
