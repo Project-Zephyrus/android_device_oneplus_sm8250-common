@@ -42,5 +42,8 @@ package_resource_overlays := $(strip \
     $(wildcard $(foreach dir, $(DEVICE_PACKAGE_OVERLAYS), \
       $(addprefix $(dir)/, packages/apps/DeviceExtras/res))))
 
+LOCAL_STATIC_JAVA_LIBRARIES := \
+    vendor.oneplus.hardware.camera-V1.0-java
+
 include frameworks/base/packages/SettingsLib/common.mk
 include $(BUILD_PACKAGE)
