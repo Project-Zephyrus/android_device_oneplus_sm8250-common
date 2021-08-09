@@ -43,6 +43,9 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
     $(LOCAL_PATH)/overlay-dot
 
+PRODUCT_PACKAGES += \
+    SettingsOverlayRefreshRate
+
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
 # API Level
