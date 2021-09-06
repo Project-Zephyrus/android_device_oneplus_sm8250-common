@@ -64,7 +64,6 @@ public class DeviceExtras extends PreferenceFragment
 
     public static final String KEY_AUTO_HBM_SWITCH = "auto_hbm";
     public static final String KEY_AUTO_HBM_THRESHOLD = "auto_hbm_threshold";
-    public static final String KEY_CATEGORY_TOUCHSCREEN="touchscreen";
     public static final String KEY_DC_SWITCH = "dc";
     public static final String KEY_DOZE = "advanced_doze_settings";
     public static final String KEY_FPS_INFO = "fps_info";
@@ -74,6 +73,7 @@ public class DeviceExtras extends PreferenceFragment
     public static final String KEY_GAME_SWITCH = "game_mode";
     public static final String KEY_HBM_SWITCH = "hbm";
     public static final String KEY_KCAL = "kcal";
+    public static final String KEY_TOUCHSCREEN="touchscreen";
     public static final String KEY_USB2_SWITCH = "usb2_fast_charge";
     public static final String KEY_VIBSTRENGTH = "vib_strength";
 
@@ -154,7 +154,7 @@ public class DeviceExtras extends PreferenceFragment
         mGameModeSwitch.setChecked(GameModeSwitch.isCurrentlyEnabled(this.getContext()));
         mGameModeSwitch.setOnPreferenceChangeListener(new GameModeSwitch());
         } else {
-            getPreferenceScreen().removePreference((Preference) findPreference(KEY_CATEGORY_TOUCHSCREEN));
+            getPreferenceScreen().removePreference((Preference) findPreference(KEY_TOUCHSCREEN));
         }
 
         // Slider Preferences
