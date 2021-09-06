@@ -29,12 +29,12 @@ import java.util.List;
 public class VibratorStrengthPreference extends CustomSeekBarPreference {
 
     private static int mMinVal = 0;
-    private static int mMaxVal = 4;
-    private static int mDefVal = 4;
+    private static int mMaxVal = 3;
+    private static int mDefVal = 3;
     private Vibrator mVibrator;
 
     private static final String FILE_LEVEL = "/sys/devices/platform/soc/a8c000.i2c/i2c-3/3-005a/leds/vibrator/level";
-    private static final long testVibrationPattern[] = {0,250};
+    private static final long testVibrationPattern[] = {0,50};
 
     public VibratorStrengthPreference(Context context, AttributeSet attrs) {
         super(context, attrs);

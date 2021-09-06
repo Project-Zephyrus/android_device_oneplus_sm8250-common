@@ -43,6 +43,23 @@
         android:defaultToDeviceProtectedStorage="true"
         android:directBootAware="true">
 
+        <receiver
+            android:name=".Startup"
+            android:defaultToDeviceProtectedStorage="true"
+            android:directBootAware="true"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <activity 
+            android:name=".DeviceExtras" />
+        <activity 
+            android:name=".KeyHandler" />
+
         <!-- DeviceExtras -->
         <activity
             android:name=".DeviceExtrasActivity"
@@ -64,24 +81,6 @@
                 android:name="com.android.settings.summary"
                 android:resource="@string/device_summary" />
         </activity>
-
-        <activity android:name=".DeviceExtras" />
-        <activity android:name=".KeyHandler" />
-
-        <receiver
-            android:name=".Startup"
-            android:defaultToDeviceProtectedStorage="true"
-            android:directBootAware="true"
-            android:enabled="true"
-            android:exported="false">
-            <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-                <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-                <action android:name="com.android.settings.action.EXTRA_SETTINGS" />
-            </intent-filter>
-        </receiver>
 
         <!-- DeviceExtras tile -->
         <service

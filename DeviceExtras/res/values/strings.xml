@@ -54,7 +54,7 @@
 
     <!-- Display -->
     <string name="display_title">Display</string>
-    <string name="dc_mode_title">DC-Dimming</string>
+    <string name="dc_mode_title">DC-dimming</string>
     <string name="dc_mode_summary">Dim backlight by lowering DC current draw</string>
     <string name="hbm_mode_title">High brightness mode</string>
     <string name="hbm_mode_summary">Enable peak luminance</string>
@@ -66,24 +66,23 @@
 
      <!-- FPS Info -->
     <string name="fps_title">Measured FPS</string>
-    <string name="fps_info_title">FPS Overlay</string>
+    <string name="fps_info_title">FPS overlay</string>
     <string name="fps_info_summary">Show overlay with current frames per second</string>
-    <string name="fps_info_color_title">Text Color</string>
+    <string name="fps_info_color_title">Text color</string>
     <string name="fps_info_color_green">Green</string>
     <string name="fps_info_color_red">Red</string>
     <string name="fps_info_color_blue">Blue</string>
     <string name="fps_info_color_yellow">Yellow</string>
     <string name="fps_info_color_black">Black</string>
     <string name="fps_info_color_accent">Follow System</string>
-    <string name="fps_info_position_title">Overlay Position</string>
+    <string name="fps_info_position_title">Overlay position</string>
     <string name="fps_info_position_top_left">Top left</string>
     <string name="fps_info_position_top_center">Top center</string>
     <string name="fps_info_position_top_right">Top right</string>
     <string name="fps_info_position_bottom_left">Bottom left</string>
     <string name="fps_info_position_bottom_center">Bottom center</string>
     <string name="fps_info_position_bottom_right">Bottom right</string>
-    <string name="fps_info_text_size_title">Text Size</string>
-
+    <string name="fps_info_text_size_title">Text size</string>
 
     <!-- Doze -->
     <string name="ambient_display_title">Ambient display</string>
@@ -154,17 +153,17 @@
 
     <!-- Touchscreen -->
     <string name="touchscreen_title">Touchscreen</string>
-    <string name="game_mode_title">Game Mode</string>
+    <string name="game_mode_title">Game mode</string>
     <string name="game_mode_summary">Force enable 240Hz sampling rate for all applications</string>
     <string name="game_mode_warning">May decrease battery life</string>
 
     <!-- USB -->
     <string name="usb_title">USB</string> 
-    <string name="usb2_fc_title">USB 2.0 Fast Charge</string>
+    <string name="usb2_fc_title">USB 2.0 fast charge</string>
     <string name="usb2_fc_summary">Force fast charging of up to 900mA in USB 2.0 mode</string>
 
     <!-- Vibrator -->
     <string name="category_vibrator">Vibrator</string>
-    <string name="vib_strength_title_head">Strength</string>
-    <string name="vib_strength_summary_head">Define the strength of the vibrator</string>
+    <string name="vib_strength_title">System strength</string>
+    <string name="vib_strength_summary">Define the intensity of the vibrator</string>
 </resources>
