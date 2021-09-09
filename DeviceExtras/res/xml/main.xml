@@ -32,10 +32,6 @@
                  android:targetClass="com.dolby.daxappui.MainActivity" />
         </Preference>
 
-        <Preference
-            android:icon="@drawable/ic_info_outline"
-            android:persistent="false"
-            android:summary="@string/dolby_info" />
     </PreferenceCategory>
 
     <PreferenceCategory
