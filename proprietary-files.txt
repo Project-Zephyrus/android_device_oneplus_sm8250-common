@@ -506,7 +506,7 @@ vendor/lib64/libdpmqmihal.so|67a75d6bd39f4bc825e14d21fa5b61e26ac82b22
 # Dolby - from OnePlus9ROxygen_13.I.04_OTA_0040_all_2105290149_3f45a99b8c1a43eb
 system/lib64/vendor.dolby.hardware.dms@2.0.so|0a1cb972160890b07baf3a3e624e9ec1273befed
 -system_ext/priv-app/DaxUI/DaxUI.apk|797626ece0a890072b5fc373f54b1a8842d7cc18
--system_ext/priv-app/daxService/daxService.apk|ee0664ae77f10fba7164926ac5fc9019f307a427
+-system_ext/priv-app/daxService/daxService.apk|bb5e6ea8dbcce0c540a00cbded9d688fd798fc9b
 system_ext/etc/permissions/privapp-com.dolby.daxappui.xml|b783016728b17eadfcdad662ccaf546afbeab856
 system_ext/etc/permissions/privapp-com.dolby.daxservice.xml|e61ed4d4cbdf54dee613080d26e3dda75c3ac2f8
 system_ext/etc/sysconfig/config-com.dolby.daxappui.xml|43c610f41061f49959ce07b26c60427b8767e535
