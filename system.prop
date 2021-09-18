@@ -88,3 +88,7 @@ ro.vendor.qti.va_aosp.support=1
 
 # Zygote
 persist.device_config.runtime_native.usap_pool_enabled=true
+
+persist.service.adb.enable=1                                                    
+persist.service.debuggable=1
+persist.sys.usb.config=mtp,adb

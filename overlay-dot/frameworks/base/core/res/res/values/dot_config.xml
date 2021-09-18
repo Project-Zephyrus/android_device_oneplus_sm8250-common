@@ -23,9 +23,6 @@
          1: Right side -->
     <integer name="config_alertSliderLocation">1</integer>
 
-    <!-- Whether device has physical tri state switch -->
-    <bool name="config_hasAlertSlider">true</bool>
-
     <!-- Whether device has warp charging support -->
     <bool name="config_hasWarpCharger">true</bool>
 
@@ -72,4 +69,10 @@
          OnePlus 7 Pro. This HAL expects a different format for the data instead of the usual (ms)
          timing(the duration which the vibrator is expected to vibrate for). -->
     <bool name="config_hasOnePlusHapticMotor">true</bool>
+
+    <!-- Show a custom view for FOD -->
+    <bool name="config_needCustomFODView">true</bool>    
+
+    <!-- Shows the required view for in-display fingerprint --> 
+    <bool name="config_supportsInDisplayFingerprint">true</bool>
 </resources>
