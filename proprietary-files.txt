@@ -580,13 +580,6 @@ vendor/lib64/libStDrvInt.so|a166aeaeaeb70f12bc607ff7852e039ee5cb004f
 vendor/lib64/libtzdrmgenprov.so|c3901e78bc20f54a4b51e10088629022544f37df
 vendor/lib64/vendor.qti.hardware.qseecom@1.0.so|b309e18174d46e30459a1ffbafd641c9752d3a25
 
-# ESE - from LA.UM.9.12.r1-10800-SMxx50.0
-vendor/bin/hw/vendor.qti.esepowermanager@1.1-service|ae3e15534b0c8abd22f8a5e52a491df8c46bd0c2
-vendor/etc/init/vendor.qti.esepowermanager@1.1-service.rc|3c024c7135ec3dd8658624509ee61396a74f1ede
-vendor/lib64/hw/vendor.qti.esepowermanager@1.1-impl.so|17f648402c874e4f981caadd91438a525089e35d
-vendor/lib64/vendor.qti.esepowermanager@1.0.so|48b202753701401c03d386dae7a00bef4aff153e
-vendor/lib64/vendor.qti.esepowermanager@1.1.so|0d8e2aee61fbbfb345870ca965458babbef9912f
-
 # Fingerprint
 vendor/lib64/hw/goodix.fod.kona.so
 vendor/lib64/hw/goodix.g6.fod.kona.so
@@ -960,14 +953,6 @@ vendor/lib64/unnhal-acc-hta.so
 vendor/lib64/unnhal-acc-hvx.so
 
 # NFC
-system/etc/nfcee_access.xml
--system_ext/app/NQNfcNci/NQNfcNci.apk
-system_ext/etc/permissions/com.nxp.nfc.nq.xml
-system_ext/framework/com.nxp.nfc.nq.jar
-system_ext/lib64/libnqnfc-nci.so
-system_ext/lib64/libnqnfc_nci_jni.so
-vendor/bin/hw/vendor.nxp.hardware.nfc@2.0-service
-vendor/etc/init/vendor.nxp.hardware.nfc@2.0-service.rc
 vendor/etc/permissions/com.nxp.mifare.xml
 vendor/etc/libese-nxp.conf
 vendor/etc/libnfc-mtp-SN100.conf
@@ -977,7 +962,7 @@ vendor/etc/libnfc-mtp-SN100.conf_19821
 vendor/etc/libnfc-mtp-SN100.conf_19867
 vendor/etc/libnfc-mtp-SN100_38_4MHZ.conf
 vendor/etc/libnfc-nci.conf
-vendor/etc/libnfc-nxp-pnscr.conf
+vendor/etc/libnfc-nxp-pnscr.conf:vendor/etc/libnfc-nxp.conf
 vendor/etc/libnfc-qrd-SN100.conf
 vendor/etc/libnfc-qrd-SN100_38_4MHZ.conf
 vendor/etc/libnfc_beijing_config.conf
@@ -989,9 +974,6 @@ vendor/etc/nfc_config_type.conf
 vendor/etc/sn100u_nfcon.pnscr
 vendor/lib/libsn100u_fw.so
 vendor/lib64/libchrome.so
-vendor/lib64/nfc_nci.nqx.default.hw.so
-vendor/lib64/se_nq_extn_client.so
-vendor/lib64/vendor.nxp.hardware.nfc@2.0.so
 
 # OMX - from LA.UM.9.12.r1-11500-SMxx50.0
 vendor/lib/libAlacSwDec.so|1d074a0415ee358cd13c981e35266cff4c6863ce
@@ -1229,13 +1211,6 @@ vendor/radio/qcril_database/upgrade/5_version_update_ecc_table.sql|fcb2cba3bfd71
 vendor/radio/qcril_database/upgrade/6_version_update_ecc_table.sql|0fdf4b6ccb48906b37885e060429f79c9fd6bdbf
 vendor/radio/qcril_database/upgrade/7_version_update_ecc_table.sql|9a76d5747da2876b87b214579c9d74ae92d218d7
 vendor/radio/qcril_database/upgrade/8_version_update_ecc_table.sql|a0603a5c46e8e67f78bdb42f2b246ecc6a37cecd
-
-# Secure element
-vendor/bin/hw/vendor.qti.secure_element@1.2-service
-vendor/etc/init/vendor.qti.secure_element@1.2-service.rc
-vendor/lib64/android.hardware.secure_element@1.0-impl.so
-vendor/lib64/jcos_nq_client.so
-vendor/lib64/ls_nq_client.so
 
 # Sensors
 vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service
