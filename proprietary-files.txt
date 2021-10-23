@@ -77,7 +77,6 @@ vendor/lib/libadiertac.so
 vendor/lib/libadm.so
 vendor/lib/libadsprpc.so
 vendor/lib/libaudcal.so
-vendor/lib/libssrec.so
 vendor/lib64/libadsprpc.so
 
 # Audio firmware - from OnePlus9Oxygen_22.I.08_GLO_0080_2105011324
