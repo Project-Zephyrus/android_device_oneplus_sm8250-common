@@ -500,7 +500,7 @@ system_ext/lib/libdpmframework.so|faf3766ab29d8326bec0915d7212066606d7f876
 system_ext/lib/libdpmtcm.so|de5e5663587cb8ab96d750e9a9cc0e951e5e984a
 system_ext/lib/vendor.qti.diaghal@1.0.so|d36b990a077c73a6ca69aa1f77e231ec43ae1e18
 system_ext/lib64/com.qualcomm.qti.dpm.api@1.0.so|6c43ecc5fb917872c91a5e46ce826bba4b767be3
-system_ext/lib64/libdiag_system.so|c6f0c7b6b5ba1489a902f92116057641a4fb7ac7
+system_ext/lib64/libdiag_system.so|3db5fa3a521cd1e0ff437673e74877d3921305e2
 system_ext/lib64/libdpmctmgr.so|68cfd00ab275a298b17515c0abd059b48e1f91c2
 system_ext/lib64/libdpmfdmgr.so|c76fa9c50ba139094b66ab918676ae0a524eda13
 system_ext/lib64/libdpmframework.so|a9c419481262c5173b1eb0602a896fde638f8a22
@@ -750,7 +750,8 @@ vendor/lib64/vendor.oneplus.hardware.ifaa@2.0.so
 vendor/bin/hw/vendor.oneplus.hardware.ifaa@2.0-service
 vendor/etc/init/vendor.oneplus.hardware.ifaa@2.0-service.rc
 
-# IMS - from LA.UM.9.12.r1-10800-SMxx50.0 
+# IMS (system) - from LA.QSSI.11.0.r1-10400-qssi.0
+-system_ext/priv-app/ims/ims.apk|9bd9423a998eae93b2c94a4820459d7b33c8a51a
 -system_ext/app/imssettings/imssettings.apk|8b47c43d56228dcce93cc8c07c6ceb08cb3d2fe5
 system_ext/lib64/lib-imsvideocodec.so|99aae5a22dbaa4a2a78703be9cecd1349f3dcb44
 system_ext/lib64/lib-imsvt.so|d9ad478a372fe9c53821a7482e96f1fc0504dd1c
@@ -767,7 +768,8 @@ system_ext/lib64/vendor.qti.ims.rcsconfig@1.1.so|414629865b66fe0dced9de924c78d32
 system_ext/lib64/vendor.qti.ims.rcsconfig@2.0.so|bb94be53fe9f52ed4b69dc42493ac6cb48a720eb
 system_ext/lib64/vendor.qti.ims.rcsconfig@2.1.so|94ee2757393b29787ff96a8694c95a7d7d8d7319
 system_ext/lib64/vendor.qti.imsrtpservice@3.0.so|393c5affc1e8e36470705ec44396d1ffa603a541
--system_ext/priv-app/ims/ims.apk|9bd9423a998eae93b2c94a4820459d7b33c8a51a
+
+# IMS (vendor) - from LA.UM.9.12.r1-10800-SMxx50.0 
 -vendor/app/IWlanService/IWlanService.apk|695b3fa7e70f6079cf7e90144fcb79591dff38d0
 vendor/bin/ims_rtp_daemon|6fce676ce5b64043539050cb73d281ddfd1c15b8
 vendor/bin/imsdatadaemon|cbe7b46af4933c8e94fea493c8b34b9b0eb412fb
@@ -1080,9 +1082,11 @@ vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so|f72dfc79135a45fc2f76336ea975f6
 vendor/lib64/vendor.qti.hardware.qccvndhal@1.0-halimpl.so|db925aebfbee9403124547a26bab1f1e13f4fdb5
 vendor/lib64/vendor.qti.hardware.qccvndhal@1.0.so|a776faac4fee084176b3c1f6f677521f04b8040c
 
-# QMI - from LA.UM.9.12.r1-10800-SMxx50.0
+# QMI (system) - from LA.QSSI.11.0.r1-10400-qssi.0
 system/etc/permissions/privapp-permissions-qti.xml|3eda27003bad39514039190d0d7eb675ba034cb9
 system/etc/sysconfig/qti_whitelist.xml|c63a9be585644fbd232328aed83a165f4354cb16
+
+# QMI (vendor) - from LA.UM.9.12.r1-10800-SMxx50.0
 vendor/bin/irsc_util|b3af449662e515f83c02d874a21a2a6cc9c9c7dc
 vendor/bin/qmipriod|07515dc1c7af062251e7020899b2f87ddb5a58fa
 vendor/etc/init/qmipriod.rc|94500dd5dc514fbb506ad8259a69ca57f4db72d6
@@ -1121,7 +1125,8 @@ vendor/lib64/libqmi_csi.so|facd22e9dd8555a4e3bcc1d6463a88141a39039d
 vendor/lib64/libqmi_encdec.so|a4531595471e8df68d75e410a1fc4f4f1a3ec2e3
 vendor/lib64/libqmiservices.so|478c3c00422bb468633273a372a71d7b0d22a890
 
-# RIL - from LA.UM.9.12.r1-10800-SMxx50.0
+# RIL (system) - from LA.QSSI.11.0.r1-10400-qssi.0
+-system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|344ad9179560cc83b208f62fb009fdc2799609fd
 -system_ext/app/QtiTelephonyService/QtiTelephonyService.apk|a32f88ddcc8f9cba18aa5697ee5bd52201e89b13
 system_ext/etc/permissions/qcrilhook.xml|30397e293b2c40e6b7a1d11c2a615cdd05de625a
 system_ext/etc/permissions/qti_libpermissions.xml|593bcb72cce68ceb0a70f50bcae7d460114e7c62
@@ -1129,7 +1134,8 @@ system_ext/etc/permissions/qti_permissions.xml|e6ff4572352b1a4f91b6b9d7cbb1cad99
 system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml|4f0056403f56928b8c75a617ba582f17061f89ae
 system_ext/etc/permissions/telephonyservice.xml|b7831598d3c19c6ce4ef431d1cc44d94c3c35a8d
 system_ext/framework/qcrilhook.jar|f2888f922b8347417dfa86741feb8348795fce6f
--system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|344ad9179560cc83b208f62fb009fdc2799609fd
+
+# RIL (vendor) - from LA.UM.9.12.r1-10800-SMxx50.0
 -vendor/app/IWlanService/IWlanService.apk|695b3fa7e70f6079cf7e90144fcb79591dff38d0
 vendor/bin/hw/qcrild|ad8316e9f0f42e67f9ee9d4bcc7943c5bc9a0087
 vendor/bin/adpl|cf8d2e3fec8a90bf6fb0cc4dc2995159ad721ccd
