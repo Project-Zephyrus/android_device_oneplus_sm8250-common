@@ -85,6 +85,7 @@
     <string name="fps_info_text_size_title">Text size</string>
 
     <!-- Doze -->
+    <string name="ambient_enable">Use ambient display</string>
     <string name="ambient_display_title">Ambient display</string>
     <string name="ambient_display_enable_title">Ambient display</string>
     <string name="ambient_display_enable_summary">Wake screen when you receive notifications</string>

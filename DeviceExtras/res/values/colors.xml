@@ -14,8 +14,4 @@
 
 <resources>
     <color name="disabled_text_color">#66000000</color> <!-- 38% black -->
-    <color name="settings_background">#eb0029</color>
-    <color name="switchbar_background_color">@*android:color/material_grey_600</color>
-    <color name="switchbar_switch_track_tint">#BFFFFFFF</color>
-    <color name="switchbar_switch_thumb_tint">@android:color/white</color>
 </resources>
