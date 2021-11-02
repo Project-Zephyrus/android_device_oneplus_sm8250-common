@@ -17,20 +17,15 @@
 */
 package org.dot.device.DeviceExtras;
 
-import android.app.Activity;
-import android.app.AlertDialog;
-import android.app.Dialog;
-import android.app.DialogFragment;
 import android.app.Fragment;
-import android.content.DialogInterface;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import androidx.preference.PreferenceFragment;
 import androidx.preference.PreferenceManager;
 
-public class DeviceExtrasActivity extends Activity {
+import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
+import com.android.settingslib.collapsingtoolbar.R;
+
+public class DeviceExtrasActivity extends CollapsingToolbarBaseActivity {
 
     private DeviceExtras mDeviceExtrasFragment;
 
@@ -38,28 +33,14 @@ public class DeviceExtrasActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        getActionBar().setDisplayHomeAsUpEnabled(true);
-
-        Fragment fragment = getFragmentManager().findFragmentById(android.R.id.content);
+        Fragment fragment = getFragmentManager().findFragmentById(R.id.content_frame);
         if (fragment == null) {
             mDeviceExtrasFragment = new DeviceExtras();
             getFragmentManager().beginTransaction()
-                .add(android.R.id.content, mDeviceExtrasFragment)
+                .add(R.id.content_frame, mDeviceExtrasFragment)
                 .commit();
         } else {
             mDeviceExtrasFragment = (DeviceExtras) fragment;
         }
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-        case android.R.id.home:
-            finish();
-            return true;
-        default:
-            break;
-        }
-        return super.onOptionsItemSelected(item);
     }
 }
