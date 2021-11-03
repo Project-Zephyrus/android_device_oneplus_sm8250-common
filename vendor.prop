@@ -181,8 +181,7 @@ ro.hardware.egl=adreno
 ro.hardware.vulkan=adreno
 ro.opengles.version=196610
 vendor.gralloc.disable_ubwc=0
-ro.hardware.egl=adreno
-ro.hardware.vulkan=adreno
+debug.renderengine.backend=skiaglthreaded
 
 # Incremental FS
 ro.incremental.enable=true
