@@ -47,7 +47,11 @@ public class Startup extends BroadcastReceiver {
         enabled = sharedPrefs.getBoolean(DeviceExtras.KEY_USB2_SWITCH, false);
         if (enabled) {
         restore(USB2FastChargeModeSwitch.getFile(), enabled);
-       }
+               }
+        enabled = sharedPrefs.getBoolean(DeviceExtras.KEY_EDGE_TOUCH, true);
+        if (enabled) {
+        restore(EdgeTouchSwitch.getFile(), enabled);
+        }
         DeviceExtras.restoreSliderStates(context);
         org.dot.device.DeviceExtras.doze.DozeUtils.checkDozeService(context);
         VibratorStrengthPreference.restore(context);
