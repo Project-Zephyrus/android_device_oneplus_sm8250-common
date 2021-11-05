@@ -165,6 +165,17 @@
             android:icon="@drawable/ic_info_outline"
             android:summary="@string/game_mode_warning" 
             android:persistent="false" />
+
+        <SwitchPreference
+            android:key="edge_touch"
+            android:icon="@drawable/ic_edge_touch"
+            android:summary="@string/edge_touch_summary"
+            android:title="@string/edge_touch_title" />
+
+        <Preference
+            android:icon="@drawable/ic_info_outline"
+            android:summary="@string/edge_touch_warning" 
+            android:persistent="false" />
     </PreferenceCategory>
 
     <PreferenceCategory
