@@ -76,6 +76,7 @@ public class DeviceExtras extends PreferenceFragment
     public static final String KEY_TOUCHSCREEN="touchscreen";
     public static final String KEY_USB2_SWITCH = "usb2_fast_charge";
     public static final String KEY_VIBSTRENGTH = "vib_strength";
+    public static final String KEY_EDGE_TOUCH = "edge_touch";
 
     private static ListPreference mFpsInfoPosition;
     private static ListPreference mFpsInfoColor;
@@ -85,6 +86,7 @@ public class DeviceExtras extends PreferenceFragment
     private static TwoStatePreference mGameModeSwitch;
     private static TwoStatePreference mHBMModeSwitch;
     private static TwoStatePreference mUSB2FastChargeModeSwitch;
+    private static TwoStatePreference mEdgeTouchSwitch;
 
     private CustomSeekBarPreference mFpsInfoTextSizePreference;
     private Preference mDozeSettings;
@@ -156,6 +158,11 @@ public class DeviceExtras extends PreferenceFragment
         } else {
             getPreferenceScreen().removePreference((Preference) findPreference(KEY_TOUCHSCREEN));
         }
+
+        mEdgeTouchSwitch = (TwoStatePreference) findPreference(KEY_EDGE_TOUCH);
+        mEdgeTouchSwitch.setEnabled(EdgeTouchSwitch.isSupported());
+        mEdgeTouchSwitch.setChecked(EdgeTouchSwitch.isCurrentlyEnabled(this.getContext()));
+        mEdgeTouchSwitch.setOnPreferenceChangeListener(new EdgeTouchSwitch());
 
         // Slider Preferences
         initNotificationSliderPreference();
