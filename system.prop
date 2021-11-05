@@ -17,7 +17,7 @@ debug.stagefright.ccodec=1
 
 # Display
 debug.gralloc.gfx_ubwc_disable=0
-debug.sf.enable_hwc_vds=1
+debug.sf.enable_hwc_vds=0
 persist.vendor.color.matrix=2
 
 # CNE
