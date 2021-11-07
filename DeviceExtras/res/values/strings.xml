@@ -154,7 +154,7 @@
     <!-- Touchscreen -->
     <string name="touchscreen_title">Touchscreen</string>
     <string name="game_mode_title">Game mode</string>
-    <string name="game_mode_summary">Force enable 240Hz sampling rate for all applications</string>
+    <string name="game_mode_summary">Force enable over 300Hz sampling rate for all applications</string>
     <string name="game_mode_warning">May decrease battery life</string>
 
     <!-- USB -->
