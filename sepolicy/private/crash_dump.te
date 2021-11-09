@@ -1,0 +1,1 @@
+allow crash_dump crash_dump:capability { sys_admin };

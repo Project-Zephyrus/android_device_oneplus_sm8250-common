@@ -1,0 +1,1 @@
+allow untrusted_app app_data_file:file { execute };
