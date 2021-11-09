@@ -58,6 +58,18 @@
         android:title="@string/display_title">
 
         <Preference
+            android:key="touchscreen_gesture_settings"
+            android:icon="@drawable/ic_gestures_icon"
+            android:persistent="false"
+            android:title="@string/touchscreen_gesture_settings_title"
+            android:summary="@string/touchscreen_gesture_settings_summary">
+            <intent
+                    android:action="android.intent.action.MAIN"
+                    android:targetPackage="com.android.touch.gestures"
+                    android:targetClass="com.android.touch.gestures.TouchscreenGestureSettings" />
+        </Preference>
+
+        <Preference
             android:key="advanced_doze_settings"
             android:icon="@drawable/ic_doze"
             android:title="@string/ambient_display_gestures_title"
