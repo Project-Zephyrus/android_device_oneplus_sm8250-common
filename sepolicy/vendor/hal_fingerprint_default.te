@@ -1,0 +1,2 @@
+allow hal_fingerprint_default default_prop:file { read };
+allow hal_fingerprint_default mnt_vendor_file:dir { search };

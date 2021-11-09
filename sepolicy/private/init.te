@@ -1,0 +1,1 @@
+allow init iorapd_data_file:file { getattr };
