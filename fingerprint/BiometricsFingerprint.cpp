@@ -83,7 +83,7 @@ BiometricsFingerprint::BiometricsFingerprint() : mClientCallback(nullptr), mDevi
         ALOGE("Can't open HAL module");
     }
     mVendorFpService = IVendorFingerprintExtensions::getService();
-    mVendorDisplayService = IOneplusDisplay::getService();    
+    mVendorDisplayService = IOneplusDisplay::getService();
 }
 
 BiometricsFingerprint::~BiometricsFingerprint() {
@@ -112,7 +112,6 @@ Return<void> BiometricsFingerprint::onFingerDown(uint32_t, uint32_t, float, floa
 }
 
 Return<void> BiometricsFingerprint::onFingerUp() {
-    mVendorDisplayService->setMode(OP_DISPLAY_SET_DIM, 0);
     mVendorDisplayService->setMode(OP_DISPLAY_NOTIFY_PRESS, 0);
     return Void();
 }
@@ -132,6 +131,7 @@ Return<void> BiometricsFingerprint::onHideUdfpsOverlay() {
     set(NATIVE_DISPLAY_SRGB, srgb);
     mVendorDisplayService->setMode(OP_DISPLAY_NOTIFY_PRESS, 0);
     mVendorDisplayService->setMode(OP_DISPLAY_SET_DIM, 0);
+    mVendorDisplayService->setMode(OP_DISPLAY_AOD_MODE, 0);
     return Void();
 }
 
@@ -225,6 +225,7 @@ Return<uint64_t> BiometricsFingerprint::setNotify(
 }
 
 Return<uint64_t> BiometricsFingerprint::preEnroll()  {
+    mVendorDisplayService->setMode(OP_DISPLAY_NOTIFY_PRESS, 0);
     return mDevice->pre_enroll(mDevice);
 }
 
@@ -240,9 +241,10 @@ Return<RequestStatus> BiometricsFingerprint::enroll(const hidl_array<uint8_t, 69
 }
 
 Return<RequestStatus> BiometricsFingerprint::postEnroll() {
-    mVendorDisplayService->setMode(OP_DISPLAY_SET_DIM, 0
+    mVendorDisplayService->setMode(OP_DISPLAY_SET_DIM, 0);
     mVendorDisplayService->setMode(OP_DISPLAY_NOTIFY_PRESS, 0);
     mVendorFpService->updateStatus(OP_ENABLE_FP_LONGPRESS);
+    mVendorFpService->updateStatus(OP_FINISH_FP_ENROLL);
     return ErrorFilter(mDevice->post_enroll(mDevice));
 }
 
@@ -280,7 +282,7 @@ Return<RequestStatus> BiometricsFingerprint::setActiveGroup(uint32_t gid,
 
 Return<RequestStatus> BiometricsFingerprint::authenticate(uint64_t operationId,
         uint32_t gid) {
-    onHideUdfpsOverlay();
+    mVendorDisplayService->setMode(OP_DISPLAY_SET_DIM, 0);
     mVendorFpService->updateStatus(OP_ENABLE_FP_LONGPRESS);
     return ErrorFilter(mDevice->authenticate(mDevice, operationId, gid));
 }
