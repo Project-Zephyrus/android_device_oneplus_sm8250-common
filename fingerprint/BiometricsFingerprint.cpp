@@ -39,6 +39,7 @@
 
 #define NATIVE_DISPLAY_P3 "/sys/class/drm/card0-DSI-1/native_display_p3_mode"
 #define NATIVE_DISPLAY_SRGB "/sys/class/drm/card0-DSI-1/native_display_srgb_color_mode"
+#define POWER_STATUS_PATH "/sys/class/drm/card0-DSI-1/power_status"
 
 
 int p3,srgb;
@@ -226,6 +227,7 @@ Return<uint64_t> BiometricsFingerprint::setNotify(
 
 Return<uint64_t> BiometricsFingerprint::preEnroll()  {
     mVendorDisplayService->setMode(OP_DISPLAY_NOTIFY_PRESS, 0);
+    set(POWER_STATUS_PATH, 1);
     return mDevice->pre_enroll(mDevice);
 }
 
@@ -283,6 +285,7 @@ Return<RequestStatus> BiometricsFingerprint::setActiveGroup(uint32_t gid,
 Return<RequestStatus> BiometricsFingerprint::authenticate(uint64_t operationId,
         uint32_t gid) {
     mVendorDisplayService->setMode(OP_DISPLAY_SET_DIM, 0);
+    set(POWER_STATUS_PATH, 1);
     mVendorFpService->updateStatus(OP_ENABLE_FP_LONGPRESS);
     return ErrorFilter(mDevice->authenticate(mDevice, operationId, gid));
 }
