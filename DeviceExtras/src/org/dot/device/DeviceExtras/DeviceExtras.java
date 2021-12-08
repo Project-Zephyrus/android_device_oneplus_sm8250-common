@@ -53,7 +53,6 @@ import java.util.Arrays;
 import org.dot.device.DeviceExtras.Constants;
 import org.dot.device.DeviceExtras.doze.DozeSettingsActivity;
 import org.dot.device.DeviceExtras.FileUtils;
-import org.dot.device.DeviceExtras.kcal.KCalSettingsActivity;
 import org.dot.device.DeviceExtras.R;
 
 public class DeviceExtras extends PreferenceFragment
@@ -72,7 +71,6 @@ public class DeviceExtras extends PreferenceFragment
     public static final String KEY_FPS_INFO_TEXT_SIZE = "fps_info_text_size";
     public static final String KEY_GAME_SWITCH = "game_mode";
     public static final String KEY_HBM_SWITCH = "hbm";
-    public static final String KEY_KCAL = "kcal";
     public static final String KEY_TOUCHSCREEN="touchscreen";
     public static final String KEY_USB2_SWITCH = "usb2_fast_charge";
     public static final String KEY_VIBSTRENGTH = "vib_strength";
@@ -88,7 +86,6 @@ public class DeviceExtras extends PreferenceFragment
 
     private CustomSeekBarPreference mFpsInfoTextSizePreference;
     private Preference mDozeSettings;
-    private Preference mKcal;
     private ListPreference mBottomKeyPref;
     private ListPreference mMiddleKeyPref;
     private ListPreference mTopKeyPref;
@@ -104,14 +101,6 @@ public class DeviceExtras extends PreferenceFragment
         mDozeSettings = (Preference)findPreference(KEY_DOZE);
         mDozeSettings.setOnPreferenceClickListener(preference -> {
             Intent intent = new Intent(getActivity().getApplicationContext(), DozeSettingsActivity.class);
-            startActivity(intent);
-            return true;
-        });
-
-        // Kcal Activity
-        mKcal = findPreference(KEY_KCAL);
-        mKcal.setOnPreferenceClickListener(preference -> {
-            Intent intent = new Intent(getActivity().getApplicationContext(), KCalSettingsActivity.class);
             startActivity(intent);
             return true;
         });
