@@ -79,18 +79,6 @@
                     android:targetClass="org.dot.device.DeviceExtras.DozeSettingsActivity" />
         </Preference>
 
-        <Preference
-            android:key="kcal"
-            android:persistent="false"
-            android:icon="@drawable/ic_kcal"
-            android:title="@string/device_kcal_title"
-            android:summary="@string/kcal_enabled_summary">
-            <intent
-                android:action="android.intent.action.MAIN"
-                android:targetClass="org.dot.device.DeviceExtras.kcal.KCalSettingsActivity"
-                android:targetPackage="org.dot.device.DeviceExtras.kcal" />
-       </Preference>
-
         <SwitchPreference
             android:key="dc"
             android:icon="@drawable/ic_dc_mode"

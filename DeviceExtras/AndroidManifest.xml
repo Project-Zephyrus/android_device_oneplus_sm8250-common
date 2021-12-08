@@ -180,29 +180,6 @@
             </intent-filter>
         </service>
 
-         <!-- KCalSettings Activity -->
-        <activity
-            android:name=".kcal.KCalSettingsActivity"
-            android:exported="false"
-            android:label="@string/advanced_settings_kcal">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-
-        <!-- KCalSettings Tile -->
-        <service
-            android:name=".kcal.KCalTileService"
-            android:icon="@drawable/ic_kcal"
-            android:label="@string/device_kcal_title"
-            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
-            <intent-filter>
-                <action
-                    android:name="android.service.quicksettings.action.QS_TILE"/>
-            </intent-filter>
-        </service>
-
         <!-- USB 2.0 force FastCharge  Tile -->
         <service
             android:name=".USB2FastChargeTileService"

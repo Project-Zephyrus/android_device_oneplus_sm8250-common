@@ -55,7 +55,6 @@ public class Startup extends BroadcastReceiver {
        }
         DeviceExtras.restoreSliderStates(context);
         org.dot.device.DeviceExtras.doze.DozeUtils.checkDozeService(context);
-        org.dot.device.DeviceExtras.kcal.KCalSettings.restore(context);
         VibratorStrengthPreference.restore(context);
     }
 
