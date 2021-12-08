@@ -33,4 +33,8 @@
      vibrator is capable of subtle vibrations -->
     <bool name="config_vibrateOnIconAnimation">true</bool>
     <integer name="config_udfpsEnrollProgressBar" translatable="false">100</integer>
+
+    <!-- Whether to pulse onFingerDown actions while in AOD. -->
+    <bool name="config_pulseOnFingerDownInAod">true</bool>
+
 </resources>
