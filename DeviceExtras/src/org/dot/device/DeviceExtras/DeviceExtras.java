@@ -63,7 +63,6 @@ public class DeviceExtras extends PreferenceFragment
 
     public static final String KEY_AUTO_HBM_SWITCH = "auto_hbm";
     public static final String KEY_AUTO_HBM_THRESHOLD = "auto_hbm_threshold";
-    public static final String KEY_DC_SWITCH = "dc";
     public static final String KEY_DOZE = "advanced_doze_settings";
     public static final String KEY_FPS_INFO = "fps_info";
     public static final String KEY_FPS_INFO_POSITION = "fps_info_position";
@@ -80,7 +79,6 @@ public class DeviceExtras extends PreferenceFragment
     private static ListPreference mFpsInfoColor;
     private static SwitchPreference mFpsInfo;
     private static TwoStatePreference mAutoHBMSwitch;
-    private static TwoStatePreference mDCModeSwitch;
     private static TwoStatePreference mGameModeSwitch;
     private static TwoStatePreference mHBMModeSwitch;
     private static TwoStatePreference mUSB2FastChargeModeSwitch;
@@ -106,12 +104,6 @@ public class DeviceExtras extends PreferenceFragment
             startActivity(intent);
             return true;
         });
-
-        // DC-Dimming
-        mDCModeSwitch = (TwoStatePreference) findPreference(KEY_DC_SWITCH);
-        mDCModeSwitch.setEnabled(DCModeSwitch.isSupported());
-        mDCModeSwitch.setChecked(DCModeSwitch.isCurrentlyEnabled(this.getContext()));
-        mDCModeSwitch.setOnPreferenceChangeListener(new DCModeSwitch());
 
         // HBM
         mHBMModeSwitch = (TwoStatePreference) findPreference(KEY_HBM_SWITCH);

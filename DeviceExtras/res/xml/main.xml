@@ -80,12 +80,6 @@
         </Preference>
 
         <SwitchPreference
-            android:key="dc"
-            android:icon="@drawable/ic_dc_mode"
-            android:title="@string/dc_mode_title"
-            android:summary="@string/dc_mode_summary" />
-
-        <SwitchPreference
             android:key="hbm"
             android:icon="@drawable/ic_hbm_mode"
             android:title="@string/hbm_mode_title"
