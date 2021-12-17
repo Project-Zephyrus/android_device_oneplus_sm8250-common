@@ -167,11 +167,6 @@
     <string name="vib_strength_title">System strength</string>
     <string name="vib_strength_summary">Define the intensity of the vibrator</string>
 
-    <!-- Dolby -->
-    <string name="dolby_category">Dolby</string>
-    <string name="dolby_title">Dolby Atmos</string>
-    <string name="dolby_summary">Configure the audio output based on media content</string>
-
     <string name="touchscreen_gesture_settings_title">TouchScreen Gestures</string>
     <string name="touchscreen_gesture_settings_summary">Perform various touchscreen gestures for quick actions</string>
 </resources>
