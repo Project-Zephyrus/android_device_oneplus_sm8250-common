@@ -28,7 +28,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 $(call inherit-product, vendor/oneplus/sm8250-common/sm8250-common-vendor.mk)
 
 # Inherit packages from vendor/oneplus/addons/camera
-#$(call inherit-product, vendor/oneplus/addons/camera/camera-vendor.mk)
+$(call inherit-product, vendor/oneplus/addons/camera/camera-vendor.mk)
 
 # Additional native libraries
 PRODUCT_COPY_FILES += \
