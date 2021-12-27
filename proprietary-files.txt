@@ -63,26 +63,23 @@ system_ext/lib/com.qualcomm.qti.ant@1.0.so
 system_ext/lib64/com.qualcomm.qti.ant@1.0.so
 vendor/lib64/hw/com.dsi.ant@1.0-impl.so
 
-# Audio libraries (stock)
+# Audio libraries
+vendor/lib/soundfx/libasphere.so
+vendor/lib/soundfx/libhaptic_effect.so
+vendor/lib/soundfx/libqcbassboost.so
+vendor/lib/soundfx/libqcreverb.so
+vendor/lib/soundfx/libqcvirt.so
+vendor/lib/soundfx/libshoebox.so
+vendor/lib/libacdb-fts.so
+vendor/lib/libacdbloader.so
+vendor/lib/libacdbrtac.so
+vendor/lib/libadiertac.so
+vendor/lib/libadm.so
 vendor/lib/libadsprpc.so
 vendor/lib/libaudcal.so
 vendor/lib/libssrec.so
 vendor/lib/soundfx/libhaptic_effect.so
 vendor/lib64/libadsprpc.so
-
-# Audio libraries - from LA.UM.9.12.r1-11500-SMxx50.0
-vendor/lib/soundfx/libasphere.so|b2daeb875914a33575c7d7a67429f25d09d35489
-vendor/lib/soundfx/libqcbassboost.so|ee0c4d196e4d17a4610857732df72380beb4fe5f
-vendor/lib/soundfx/libqcreverb.so|c8b0d11d5853da4e5559008020b880b4ca9192e9
-vendor/lib/soundfx/libqcvirt.so|e270a03cbbf230658a7d130518c4ead9cfd73675
-vendor/lib/soundfx/libshoebox.so|214d5fefd21c617bdfa05255fe667127b4242556
-vendor/lib/libacdb-fts.so|3068a41916ec39a49e269a29cb712842923210e4
-vendor/lib/libacdbloader.so|4adeee66611c34a6bb7d14d3056b61f26452ec6e
-vendor/lib/libacdbrtac.so|3ca940a5d786b1a1ca6f698fdc394b693256aa84
-vendor/lib/libadiertac.so|531e585429dab635a0d01ec05e184fb9643b1202
-vendor/lib/libadm.so|1954acdfa454e83054bb7d7656b8f276287f8a22
-vendor/lib/libaudcal.so|361ff31158a7063cae7596736639e516d59fb16b
-vendor/lib/libqtigef.so|4472937ed2da33a2e162ea285c369ab18d478da6
 
 # Audio firmware - from OnePlus9Oxygen_22.I.08_GLO_0080_2105011324
 vendor/firmware/tfa98xx.cnt|5578bfb86a4123af049c2885af7b30d3fd0a53e4
@@ -925,20 +922,18 @@ vendor/lib64/libkeymasterprovision.so|2605bfa33737ed68a7cfc1f13d3d38740c2045f4
 vendor/lib64/libkeymasterutils.so|bbda5a3868c21261bee179056ef8650332d10857
 vendor/lib64/libqtikeymaster4.so|3091036aa1094b655fff9953ae1a4869ea36e216
 
-# Listen (stock)
+# Listen
 vendor/lib/hw/sound_trigger.primary.kona.so
+vendor/lib/libadpcmdec.so
+vendor/lib/libcapiv2svacnn.so
+vendor/lib/libcapiv2vop.so
+vendor/lib/libgcs-calwrapper.so
+vendor/lib/libgcs-ipc.so
+vendor/lib/libgcs-osal.so
+vendor/lib/libgcs.so
+vendor/lib/liblistensoundmodel2.so
+vendor/lib/libmulawdec.so
 vendor/lib/libsmwrapper.so
-
-# Listen - from LA.UM.9.12.r1-11500-SMxx50.0
-vendor/lib/libadpcmdec.so|297d8fecff85b6dc67ff19e788bcf3f1286014a0
-vendor/lib/libcapiv2svacnn.so|aa20d352b6f91cfcbb528795e023d18bd78bbecf
-vendor/lib/libcapiv2vop.so|841c807b9be30ecdcaa73105d46e72668b404185
-vendor/lib/libgcs-calwrapper.so|80a589a3ca69206a5bdb119c660fc4978568f5cc
-vendor/lib/libgcs-ipc.so|83a3edb3b6911c192cbf812ca9092853b1906dcd
-vendor/lib/libgcs-osal.so|7153c4a37d5fcd9084e8f1570bfa83cd7b9ed3a4
-vendor/lib/libgcs.so|9aa4ee59f5ac5caa9dc466d10a5312d214ff2058
-vendor/lib/liblistensoundmodel2.so|f38ff745da0f71064a2fff642c3f2696e3e30331
-vendor/lib/libmulawdec.so|89ebb1d9e77911f1abe37405016839d8436a9825
 
 # Media - from LA.UM.9.12.r1-11500-SMxx50.0
 system_ext/lib/libmmosal.so|d6fabd9084c804d0077e7c0e820cb76eae759479
@@ -946,6 +941,19 @@ system_ext/lib/libmmparser_lite.so|c4b7d2e43a3d8e52e32edfcc54fd2fcb36f67e13
 system_ext/lib64/libmmosal.so|a8021c7c2b2a0b9a34b3e75ef746247daaf5185f
 vendor/etc/system_properties.xml|f859685e7d871600942a38231dd15f7a09d0562b
 vendor/lib64/libmmosal.so|6035b5e609a97157a31f12ec601fc3ae60f31e36
+system_ext/lib/libmmosal.so
+system_ext/lib/libmmrtpdecoder.so
+system_ext/lib/libmmrtpencoder.so
+system_ext/lib64/libmmparser_lite.so
+system_ext/lib64/libmmrtpdecoder.so
+system_ext/lib64/libmmrtpencoder.so
+vendor/lib/libFileMux_proprietary.so
+vendor/lib/libmmrtpdecoder_proprietary.so
+vendor/lib/libmmrtpencoder_proprietary.so
+vendor/lib/libmm-hdcpmgr.so
+vendor/lib/libmmosal.so
+system_ext/lib64/libmmosal.so
+vendor/lib64/libmmosal.so
 
 # Neural networks
 vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-qti
@@ -994,51 +1002,51 @@ vendor/lib64/nfc_nci.nqx.default.hw.so
 vendor/lib64/se_nq_extn_client.so
 vendor/lib64/vendor.nxp.hardware.nfc@2.0.so
 
-# OMX - from LA.UM.9.12.r1-11500-SMxx50.0
-vendor/lib/libAlacSwDec.so|1d074a0415ee358cd13c981e35266cff4c6863ce
-vendor/lib/libApeSwDec.so|ce425ef9372ed6635e313422b3578f77b90ff526
-vendor/lib/libdsd2pcm.so|c5ab1afd7a5a23bf83d80b5ac74247c3dd2085af
-vendor/lib/libFlacSwDec.so|01c7a51d93c2fe447e23c1210832b39b171393e3
-vendor/lib/libMpeg4SwEncoder.so|d3ac395fc364ae5d0003f1f787f76b8ee9ad5968
-vendor/lib/libOmxAacDec.so|83cb8e710ba472025ba9491f221887c146f99a2c
-vendor/lib/libOmxAlacDec.so|f1a3fba8a593241fc8f9bdcc935347b57ba511c1
-vendor/lib/libOmxAlacDecSw.so|150f1fee193918792a88797766ddf12d1a388efd
-vendor/lib/libOmxAmrDec.so|c9900446de3b8d0808b5d8bf1729f0a3338096dc
-vendor/lib/libOmxAmrwbplusDec.so|eeac5a59ca69e03d20ff6d31fd25825c4ab86bfb
-vendor/lib/libOmxApeDec.so|c215fdce163982224af7acc7faef01a62459d03e
-vendor/lib/libOmxApeDecSw.so|f3e64e54808f57f146173532335ea45db1fb54f4
-vendor/lib/libOmxDsdDec.so|f74936badeb8303b2bb17475b9cd157b1c81131c
-vendor/lib/libOmxEvrcDec.so|827e34f3068a733c39772d46f3757e42e21975c9
-vendor/lib/libOmxG711Dec.so|b0650d0c0c8db5473f3ebb957fafb76857d92d3c
-vendor/lib/libOmxMpeghDecSw.so|ec57b1a9572dd535023bbfd8e5d179caf306418b
-vendor/lib/libOmxMpeghEncSw.so|7ea10eea872ab2315f9dcf40a774853d9237ebc1
-vendor/lib/libOmxQcelp13Dec.so|44698fe731f52e64f4646c6262c9b4adba3d807b
-vendor/lib/libOmxSwVdec.so|46f0c55b30f48fdc719710dc927ba15195041792
-vendor/lib/libOmxSwVencMpeg4.so|497aa290ed29d26f1129f5d928a21a46b01864b5
-vendor/lib/libOmxVideoDSMode.so|0771a2c2f34dc484f9b0b3625dd0a40361dec060
-vendor/lib/libOmxVpp.so|bf4ff1dca312814cd4f8de465a5a6af099f29910
-vendor/lib/libOmxWmaDec.so|db161e70da762cd40e743a6ddb03ff4ed0a6e7bb
-vendor/lib/libswvdec.so|7d269da9b5b9b2f5e4ee3ce3b68e3725ce012ef0
-vendor/lib64/libAlacSwDec.so|345c43493c529a4075b9637f8140adcd33043aef
-vendor/lib64/libApeSwDec.so|efac4ae01cd425577c704d06704b00970d324167
-vendor/lib64/libFlacSwDec.so|68996ead82be37a00946da626be705acb31848de
-vendor/lib64/libMpeg4SwEncoder.so|40d8eed5d93872d4f453c0bdd562ada091046a04
-vendor/lib64/libOmxAacDec.so|15c532ee9998753193fe7caa60eebd3a58ed90bf
-vendor/lib64/libOmxAlacDec.so|9bbfe179cff49a81e82362b3082d30389a3a63dc
-vendor/lib64/libOmxAlacDecSw.so|2174f226c15ff15558bbfaab559f6542fcd784ab
-vendor/lib64/libOmxAmrDec.so|9f172520da87f99d3d4e0aa2ea2225d496371d95
-vendor/lib64/libOmxAmrwbplusDec.so|af45eefbc621fae53dc7fa4d633da4224056907f
-vendor/lib64/libOmxApeDec.so|bb655d3b495240e41a542b1ecc4ab522aed287da
-vendor/lib64/libOmxApeDecSw.so|76741dbc4de400163e692817d200ae02ab72f85e
-vendor/lib64/libOmxEvrcDec.so|a793c523f124535ae7591fe76ca6f2eba3f38d8f
-vendor/lib64/libOmxG711Dec.so|ccafab0e629518304f606fcf61382bd829e100be
-vendor/lib64/libOmxMpeghEncSw.so|b7c9db846385f6431c3e488082c68f3488517860
-vendor/lib64/libOmxQcelp13Dec.so|d3d11987b8dc3c6605ed79b7f34537a325dfbf79
-vendor/lib64/libOmxSwVdec.so|06446ba69a2adc65d00b9bbffdeaac9873f1fc53
-vendor/lib64/libOmxSwVencMpeg4.so|9422ac269b8c276e3c7ac78ae3ef3a73bc006551
-vendor/lib64/libOmxVpp.so|c62377932a30c234bd5f41829d416e9e05cbe7de
-vendor/lib64/libOmxWmaDec.so|cd75236444f762cff1702f46cc36e5a230ec3b85
-vendor/lib64/libswvdec.so|e50cc714152873d4fdcabd3ed1bbf9e635725b78
+# OMX
+vendor/lib/libAlacSwDec.so
+vendor/lib/libApeSwDec.so
+vendor/lib/libFlacSwDec.so
+vendor/lib/libMpeg4SwEncoder.so
+vendor/lib/libOmxAacDec.so
+vendor/lib/libOmxAlacDec.so
+vendor/lib/libOmxAlacDecSw.so
+vendor/lib/libOmxAmrDec.so
+vendor/lib/libOmxAmrwbplusDec.so
+vendor/lib/libOmxApeDec.so
+vendor/lib/libOmxApeDecSw.so
+vendor/lib/libOmxDsdDec.so
+vendor/lib/libOmxEvrcDec.so
+vendor/lib/libOmxG711Dec.so
+vendor/lib/libOmxMpeghDecSw.so
+vendor/lib/libOmxMpeghEncSw.so
+vendor/lib/libOmxQcelp13Dec.so
+vendor/lib/libOmxSwVdec.so
+vendor/lib/libOmxSwVencMpeg4.so
+vendor/lib/libOmxVideoDSMode.so
+vendor/lib/libOmxVpp.so
+vendor/lib/libOmxWmaDec.so
+vendor/lib/libdsd2pcm.so
+vendor/lib/libswvdec.so
+vendor/lib64/libAlacSwDec.so
+vendor/lib64/libApeSwDec.so
+vendor/lib64/libFlacSwDec.so
+vendor/lib64/libMpeg4SwEncoder.so
+vendor/lib64/libOmxAacDec.so
+vendor/lib64/libOmxAlacDec.so
+vendor/lib64/libOmxAlacDecSw.so
+vendor/lib64/libOmxAmrDec.so
+vendor/lib64/libOmxAmrwbplusDec.so
+vendor/lib64/libOmxApeDec.so
+vendor/lib64/libOmxApeDecSw.so
+vendor/lib64/libOmxEvrcDec.so
+vendor/lib64/libOmxG711Dec.so
+vendor/lib64/libOmxMpeghEncSw.so
+vendor/lib64/libOmxQcelp13Dec.so
+vendor/lib64/libOmxSwVdec.so
+vendor/lib64/libOmxSwVencMpeg4.so
+vendor/lib64/libOmxVpp.so
+vendor/lib64/libOmxWmaDec.so
+vendor/lib64/libswvdec.so
 
 # OPFeature
 vendor/bin/opf-service
