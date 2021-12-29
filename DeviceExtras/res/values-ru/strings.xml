@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2014-2016 The OmniROM Project
+     Copyright (C) 2021 The Evolution X Project
+     Copyright (C) 2018 The Xiaomi-SDM660 Project
+     Copyright (C) 2018-2021 crDroid Android Project
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+        http://www.apache.org/licenses/LICENSE-2.0
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+<resources>
+    <!-- Device Extras -->
+    <string name="device_title">Настройки устройства</string>
+    <string name="device_summary">Регулируйте настройки, специфичные для данного устройства</string>
+	
+    <!-- Alert slider -->
+    <string name="notification_slider_category_title">Переключатель режимов</string>
+    <string name="notification_slider_title">Настройки переключателя режимов</string>
+    <string name="notification_slider_selection_dialog_title">Действие</string>
+    <string name="notification_slider_top_position">Верхнее положение</string>
+    <string name="notification_slider_middle_position">Среднее положение</string>
+    <string name="notification_slider_bottom_position">Нижнее положение</string>
+    <string name="notification_slider_mode_total_silence">Абсолютная тишина</string>
+    <string name="notification_slider_mode_alarms_only">Только будильники</string>
+    <string name="notification_slider_mode_priority_only">Только приоритетные</string>
+    <string name="notification_slider_mode_none">Всё</string>
+    <string name="notification_slider_usage_title">Использовать переключатель для</string>
+    <string name="notification_slider_for_notification">Уведомлений</string>
+    <string name="notification_slider_for_flashlight">Фонарик</string>
+    <string name="notification_slider_for_brightness">Яркость</string>
+    <string name="notification_slider_for_rotation">Ориентация</string>
+    <string name="notification_slider_for_ringer">Звонок</string>
+    <string name="notification_slider_for_notification_ringer">Уведомления и звонок</string>
+    <string name="notification_slider_flashlight_off">Выкл</string>
+    <string name="notification_slider_flashlight_on">Вкл</string>
+    <string name="notification_slider_flashlight_blink">Мигание</string>
+    <string name="notification_slider_brightness_auto">Авто</string>
+    <string name="notification_slider_brightness_brightest">Самая яркая</string>
+    <string name="notification_slider_brightness_darkest">Самая темная</string>
+    <string name="notification_slider_rotation_auto">Авто</string>
+    <string name="notification_slider_rotation_portrait">Вертикальная</string>
+    <string name="notification_slider_rotation_landscape_90">Горизонтальная (90°)</string>
+    <string name="notification_slider_rotation_landscape_270">Горизонтальная (270°)</string>
+    <string name="notification_slider_ringer_normal">Нормальный</string>
+    <string name="notification_slider_ringer_vibrate">Вибрация</string>
+    <string name="notification_slider_ringer_silent">Беззвучный</string>
+
+    <!-- Display -->
+    <string name="display_title">Экран</string>
+    <string name="hbm_mode_title">Режим высокой яркости</string>
+    <string name="hbm_mode_summary">Включить максимальную подсветку</string>
+    <string name="hbm_mode_warning">Длительное использования режима высокой яркости может повредить ваш дисплей</string>
+    <string name="auto_hbm_title">Автоматический режим высокой яркости</string>
+    <string name="auto_hbm_summary">Включить максимальную подсветку, основанную на солнечном свете</string>
+    <string name="auto_hbm_threshold_title"></string>
+    <string name="auto_hbm_threshold_summary">Порог (lux)</string>
+
+     <!-- FPS Info -->
+    <string name="fps_title">Измерение FPS</string>
+    <string name="fps_info_title">FPS оверлей</string>
+    <string name="fps_info_summary">Отображать оверлей с актуальным значением кадров в секунду</string>
+    <string name="fps_info_color_title">Цвет текста</string>
+    <string name="fps_info_color_green">Зеленый</string>
+    <string name="fps_info_color_red">Красный</string>
+    <string name="fps_info_color_blue">Синий</string>
+    <string name="fps_info_color_yellow">Желтый</string>
+    <string name="fps_info_color_black">Черный</string>
+    <string name="fps_info_color_accent">Системный</string>
+    <string name="fps_info_position_title">Позиция оверлея</string>
+    <string name="fps_info_position_top_left">Сверху слева</string>
+    <string name="fps_info_position_top_center">Сверху в центре</string>
+    <string name="fps_info_position_top_right">Сверху справа</string>
+    <string name="fps_info_position_bottom_left">Снизу слева</string>
+    <string name="fps_info_position_bottom_center">Снизу в центре</string>
+    <string name="fps_info_position_bottom_right">Снизу справа</string>
+    <string name="fps_info_text_size_title">Размер текста</string>
+
+    <!-- Doze -->
+    <string name="ambient_enable">Использовать индикацию событий</string>
+    <string name="ambient_display_title">Индикация событий</string>
+    <string name="ambient_display_enable_title">Индикация событий</string>
+    <string name="ambient_display_enable_summary">Включать экран при получении новых уведомлений</string>
+    <string name="ambient_display_gestures_title">Жесты индикации событий</string>
+    <string name="ambient_display_gestures_summary">Дополнительные жесты для пробуждения экрана</string>
+    <string name="ambient_display_summary">Включать экран при получении новых уведомлений</string>
+    <string name="ambient_display_always_on_title">Постоянно включен</string>
+    <string name="dialog_ok">OK</string>
+    <string name="disabled">Выкл</string>
+    <string name="pickup_sensor_title">Датчик поднятия устройства</string>
+    <string name="pick_up_gesture_title">Подъем устройства</string>
+    <string name="pick_up_gesture_summary">Отображать AOD</string>
+    <string name="pick_up_wake_gesture_summary">Пробуждать устройство</string>
+    <string name="pocket_gesture_title">Режим "В кармане"</string>
+    <string name="pocket_gesture_summary">Отображать AOD при извлечении устройства из кармана</string>
+    <string name="proximity_sensor_title">Датчик приближения</string>
+    <string name="ambient_display_always_on_summary">Отображать время, значки уведомлений и др. Повышает энергопотребление.</string>
+    <string name="switch_bar_off">Выкл</string>
+    <string name="switch_bar_on">Вкл</string>
+
+    <!-- Touchscreen -->
+    <string name="touchscreen_title">Тачскрин</string>
+    <string name="game_mode_title">Игровой режим</string>
+    <string name="game_mode_summary">Принудительно включить более 300Гц обновление сенсора для всех приложений</string>
+    <string name="game_mode_warning">Может уменьшить время работы от батареи</string>
+
+    <!-- USB -->
+    <string name="usb_title">USB</string> 
+    <string name="usb2_fc_title">Быстрая зарядка от USB 2.0</string>
+    <string name="usb2_fc_summary">Принудительная быстрая зарядка до 900мА в режиме USB 2.0</string>
+
+    <!-- Vibrator -->
+    <string name="category_vibrator">Вибро</string>
+    <string name="vib_strength_title">Сила вибрации</string>
+    <string name="vib_strength_summary">Отрегулируйте силу вибрации</string>
+
+    <string name="touchscreen_gesture_settings_title">Жесты на выключенном экране</string>
+    <string name="touchscreen_gesture_settings_summary">Выполняйте различные жесты на выключенном экране для быстрых действий</string>
+</resources>
