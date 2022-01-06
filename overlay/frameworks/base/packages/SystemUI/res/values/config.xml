@@ -37,4 +37,6 @@
     <!-- Whether to pulse onFingerDown actions while in AOD. -->
     <bool name="config_pulseOnFingerDownInAod">true</bool>
 
+    <!-- Location on the screen of the center of the Physical Power Button. -->
+    <dimen name="physical_power_button_center_screen_location_y">900px</dimen>
 </resources>
