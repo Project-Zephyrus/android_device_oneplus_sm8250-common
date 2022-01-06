@@ -130,9 +130,7 @@ Return<void> BiometricsFingerprint::onHideUdfpsOverlay() {
     set(NATIVE_DISPLAY_SRGB, 0);
     set(NATIVE_DISPLAY_P3, p3);
     set(NATIVE_DISPLAY_SRGB, srgb);
-    mVendorDisplayService->setMode(OP_DISPLAY_NOTIFY_PRESS, 0);
     mVendorDisplayService->setMode(OP_DISPLAY_SET_DIM, 0);
-    mVendorDisplayService->setMode(OP_DISPLAY_AOD_MODE, 0);
     return Void();
 }
 
@@ -160,6 +158,7 @@ Return<RequestStatus> BiometricsFingerprint::ErrorFilter(int32_t error) {
 // HIDL-compliant FingerprintError.
 FingerprintError BiometricsFingerprint::VendorErrorFilter(int32_t error,
             int32_t* vendorCode) {
+    *vendorCode = 0;
     switch(error) {
         case FINGERPRINT_ERROR_HW_UNAVAILABLE:
             return FingerprintError::ERROR_HW_UNAVAILABLE;
@@ -190,6 +189,7 @@ FingerprintError BiometricsFingerprint::VendorErrorFilter(int32_t error,
 // to HIDL-compliant FingerprintAcquiredInfo.
 FingerprintAcquiredInfo BiometricsFingerprint::VendorAcquiredFilter(
         int32_t info, int32_t* vendorCode) {
+    *vendorCode = 0;
     switch(info) {
         case FINGERPRINT_ACQUIRED_GOOD:
             return FingerprintAcquiredInfo::ACQUIRED_GOOD;
