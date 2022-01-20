@@ -59,6 +59,9 @@ TARGET_ODM_PROP += $(COMMON_PATH)/odm.prop
 TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
 TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
 
+# Assert
+TARGET_OTA_ASSERT_DEVICE := OnePlus8Pro,instantnoodlep
+
 # A/B
 AB_OTA_UPDATER := true
 
