@@ -39,6 +39,7 @@
 
 #define NATIVE_DISPLAY_P3 "/sys/class/drm/card0-DSI-1/native_display_p3_mode"
 #define NATIVE_DISPLAY_SRGB "/sys/class/drm/card0-DSI-1/native_display_srgb_color_mode"
+#define AUTH_STATUS_PATH  "/sys/class/drm/card0-DSI-1/auth_status"
 #define POWER_STATUS_PATH "/sys/class/drm/card0-DSI-1/power_status"
 
 
@@ -113,6 +114,7 @@ Return<void> BiometricsFingerprint::onFingerDown(uint32_t, uint32_t, float, floa
 }
 
 Return<void> BiometricsFingerprint::onFingerUp() {
+    this->isCancelled = 0;
     mVendorDisplayService->setMode(OP_DISPLAY_NOTIFY_PRESS, 0);
     return Void();
 }
@@ -126,6 +128,7 @@ Return<void> BiometricsFingerprint::onShowUdfpsOverlay() {
 }
 
 Return<void> BiometricsFingerprint::onHideUdfpsOverlay() {
+    this->isCancelled = 0;
     set(NATIVE_DISPLAY_P3, 0);
     set(NATIVE_DISPLAY_SRGB, 0);
     set(NATIVE_DISPLAY_P3, p3);
@@ -255,8 +258,10 @@ Return<uint64_t> BiometricsFingerprint::getAuthenticatorId() {
 }
 
 Return<RequestStatus> BiometricsFingerprint::cancel() {
+    this->isCancelled = 1;
     mVendorDisplayService->setMode(OP_DISPLAY_SET_DIM, 0);
     mVendorFpService->updateStatus(OP_FINISH_FP_ENROLL);
+    set(AUTH_STATUS_PATH, 2);
     return ErrorFilter(mDevice->cancel(mDevice));
 }
 
@@ -284,9 +289,14 @@ Return<RequestStatus> BiometricsFingerprint::setActiveGroup(uint32_t gid,
 
 Return<RequestStatus> BiometricsFingerprint::authenticate(uint64_t operationId,
         uint32_t gid) {
-    mVendorDisplayService->setMode(OP_DISPLAY_SET_DIM, 0);
     set(POWER_STATUS_PATH, 1);
     mVendorFpService->updateStatus(OP_ENABLE_FP_LONGPRESS);
+    if (this->isCancelled) {
+        mVendorDisplayService->setMode(OP_DISPLAY_SET_DIM, 1);
+        set(AUTH_STATUS_PATH, 0);
+    } else {
+        set(AUTH_STATUS_PATH, 1);
+    }
     return ErrorFilter(mDevice->authenticate(mDevice, operationId, gid));
 }
 
