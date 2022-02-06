@@ -79,35 +79,35 @@ static const char LED_DEVICE[] = "/sys/class/leds/vibrator";
 static std::map<Effect, std::vector<std::pair<std::string, std::string>>> LED_EFFECTS{
     { Effect::CLICK, {
         { IGNORE_STORE_PATH, "0" },
-        { DURATION_PATH, "60" },
-        { VMAX_PATH, "0x1f" },
-        { GAIN_PATH, "0x96" },
+        { DURATION_PATH, "10" },
+        { VMAX_PATH, "0x16" },
+        { GAIN_PATH, "0x77" },
         { SEQ_PATH, "0x00 0x03" },
         { LOOP_PATH, "0x00 0x00" },
         { BRIGHTNESS_PATH, "1" },
     }},
     { Effect::DOUBLE_CLICK, {
         { IGNORE_STORE_PATH, "0" },
-        { DURATION_PATH, "80" },
-        { VMAX_PATH, "0x1f" },
-        { GAIN_PATH, "0x96" },
-        { SEQ_PATH, "0x00 0x03" },
+        { DURATION_PATH, "13" },
+        { VMAX_PATH, "0x16" },
+        { GAIN_PATH, "0x77" },
+        { SEQ_PATH, "0x00 0x05" },
         { LOOP_PATH, "0x00 0x00" },
         { BRIGHTNESS_PATH, "1" },
         { "SLEEP", "150" },
         { IGNORE_STORE_PATH, "0" },
-        { DURATION_PATH, "75" },
-        { VMAX_PATH, "0x1f" },
-        { GAIN_PATH, "0x96" },
-        { SEQ_PATH, "0x00 0x03" },
+        { DURATION_PATH, "13" },
+        { VMAX_PATH, "0x16" },
+        { GAIN_PATH, "0x77" },
+        { SEQ_PATH, "0x00 0x05" },
         { LOOP_PATH, "0x00 0x00" },
         { BRIGHTNESS_PATH, "1" },
     }},
     { Effect::TICK, {
         { IGNORE_STORE_PATH, "0" },
         { DURATION_PATH, "30" },
-        { VMAX_PATH, "0x1f" },
-        { GAIN_PATH, "0x80" },
+        { VMAX_PATH, "0x16" },
+        { GAIN_PATH, "0x77" },
         { SEQ_PATH, "0x00 0x03" },
         { LOOP_PATH, "0x00 0x00" },
         { BRIGHTNESS_PATH, "1" },
@@ -115,8 +115,8 @@ static std::map<Effect, std::vector<std::pair<std::string, std::string>>> LED_EF
     { Effect::THUD, {
         { IGNORE_STORE_PATH, "0" },
         { DURATION_PATH, "60" },
-        { VMAX_PATH, "0x1f" },
-        { GAIN_PATH, "0x96" },
+        { VMAX_PATH, "0x16" },
+        { GAIN_PATH, "0x77" },
         { SEQ_PATH, "0x00 0x03" },
         { LOOP_PATH, "0x00 0x00" },
         { BRIGHTNESS_PATH, "1" },
@@ -124,17 +124,17 @@ static std::map<Effect, std::vector<std::pair<std::string, std::string>>> LED_EF
     { Effect::POP, {
         { IGNORE_STORE_PATH, "0" },
         { DURATION_PATH, "60" },
-        { VMAX_PATH, "0x1f" },
-        { GAIN_PATH, "0x96" },
+        { VMAX_PATH, "0x16" },
+        { GAIN_PATH, "0x77" },
         { SEQ_PATH, "0x00 0x03" },
         { LOOP_PATH, "0x00 0x00" },
         { BRIGHTNESS_PATH, "1" },
     }},
     { Effect::HEAVY_CLICK, {
         { IGNORE_STORE_PATH, "0" },
-        { DURATION_PATH, "100" },
-        { VMAX_PATH, "0x1f" },
-        { GAIN_PATH, "0x96" },
+        { DURATION_PATH, "10" },
+        { VMAX_PATH, "0x16" },
+        { GAIN_PATH, "0x77" },
         { SEQ_PATH, "0x00 0x03" },
         { LOOP_PATH, "0x00 0x00" },
         { BRIGHTNESS_PATH, "1" },
@@ -147,7 +147,7 @@ static std::vector<std::vector<std::pair<std::string, std::string>>> VIBRATOR_CO
         { DURATION_PATH, "0" },         // placeholder
         { SEQ_PATH, "0x00 0x01" },
         { GAIN_PATH, "0" },             // placeholder
-        { VMAX_PATH, "0x1f" },
+        { VMAX_PATH, "0x16" },
         { LOOP_PATH, "0x00 0x00" },
         { BRIGHTNESS_PATH, "1" },
     },
@@ -156,7 +156,7 @@ static std::vector<std::vector<std::pair<std::string, std::string>>> VIBRATOR_CO
         { DURATION_PATH, "0" },         // placeholder
         { SEQ_PATH, "0x00 0x02" },
         { GAIN_PATH, "0" },             // placeholder
-        { VMAX_PATH, "0x1f" },
+        { VMAX_PATH, "0x16" },
         { LOOP_PATH, "0x00 0x00" },
         { BRIGHTNESS_PATH, "1" },
     },
@@ -165,15 +165,15 @@ static std::vector<std::vector<std::pair<std::string, std::string>>> VIBRATOR_CO
         { DURATION_PATH, "0" },         // placeholder
         { SEQ_PATH, "0x00 0x03" },
         { GAIN_PATH, "0" },             // placeholder
-        { VMAX_PATH, "0x1f" },
+        { VMAX_PATH, "0x16" },
         { LOOP_PATH, "0x00 0x00" },
         { BRIGHTNESS_PATH, "1" },
     },
     {   // 100ms+
         { IGNORE_STORE_PATH, "0\n" },
         { DURATION_PATH, "0" },         // placeholder
-        { VMAX_PATH, "0x1f" },
-        { GAIN_PATH, "0x80" },
+        { VMAX_PATH, "0x16" },
+        { GAIN_PATH, "0x60" },
         { ACTIVATE_PATH, "1" },
     }
 };
@@ -485,8 +485,8 @@ int LedVibratorDevice::on(int32_t timeoutMs) {
     int index = (timeoutMs < 81) ? 0 : (timeoutMs < 91) ? 1 :
                 (timeoutMs < 101) ? 2 : 3;
     int gain = 4 + 1.24*timeoutMs;
-    if (gain > 128) {
-        gain = 128;             // 0x80
+    if (gain > 119) {
+        gain = 119;             // 0x77
     }
     ALOGD("QTI Vibrator on for %d ms with a gain of 0x%x", timeoutMs, gain);
     for (const auto &[path, value] : VIBRATOR_CONSTANTS[index]) {
@@ -712,4 +712,3 @@ ndk::ScopedAStatus Vibrator::alwaysOnDisable(int32_t id __unused) {
 }  // namespace hardware
 }  // namespace android
 }  // namespace aidl
-
