@@ -12,4 +12,4 @@ allow system_server dot_data_file:file r_file_perms;
 allow system_server proc_touchpanel:dir { search };
 
 allow system_server vendor_proc_shs:dir { search };
-allow system_server sysfs_tri_state_key:file { read };
+allow system_server sysfs_tri_state_key:file { getattr open read };
