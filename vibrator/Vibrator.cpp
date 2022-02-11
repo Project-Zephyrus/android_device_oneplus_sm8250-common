@@ -94,7 +94,7 @@ static std::map<Effect, std::vector<std::pair<std::string, std::string>>> LED_EF
         { SEQ_PATH, "0x00 0x05" },
         { LOOP_PATH, "0x00 0x00" },
         { BRIGHTNESS_PATH, "1" },
-        { "SLEEP", "150" },
+        { "SLEEP", "100" },
         { IGNORE_STORE_PATH, "0" },
         { DURATION_PATH, "13" },
         { VMAX_PATH, "0x16" },
