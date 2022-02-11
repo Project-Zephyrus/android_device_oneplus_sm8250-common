@@ -19,6 +19,7 @@ package org.dot.device.DeviceExtras;
 import android.content.Context;
 import android.content.Intent;
 import android.os.UserHandle;
+import android.os.VibrationEffect;
 import android.os.Vibrator;
 import android.util.Log;
 
@@ -32,12 +33,21 @@ public abstract class SliderControllerBase {
     private static final int KEY_SLIDER_MIDDLE = 602;
     private static final int KEY_SLIDER_BOTTOM = 603;
 
+    // Vibration effects
+    private static final VibrationEffect MODE_NORMAL_EFFECT =
+            VibrationEffect.get(VibrationEffect.EFFECT_HEAVY_CLICK);
+    private static final VibrationEffect MODE_VIBRATION_EFFECT =
+            VibrationEffect.get(VibrationEffect.EFFECT_DOUBLE_CLICK);
+
+
     protected final Context mContext;
+    private final Vibrator mVibrator;
 
     private int[] mActions = null;
 
     public SliderControllerBase(Context context) {
         mContext = context;
+        mVibrator = mContext.getSystemService(Vibrator.class);
     }
 
     public final void update(int[] actions) {
@@ -64,10 +74,12 @@ public abstract class SliderControllerBase {
             case KEY_SLIDER_BOTTOM:
                 result = processAction(mActions[0]);
                 notifySliderChange(context, result, 0);
+                doHapticFeedback(MODE_NORMAL_EFFECT);
                 break;
             case KEY_SLIDER_MIDDLE:
                 result = processAction(mActions[1]);
                 notifySliderChange(context, result, 1);
+                doHapticFeedback(MODE_VIBRATION_EFFECT);
                 break;
             case KEY_SLIDER_TOP:
                 result = processAction(mActions[2]);
@@ -81,6 +93,12 @@ public abstract class SliderControllerBase {
     private void notifySliderChange(Context context, int result, int position) {
         if (result > 0)
             sendUpdateBroadcast(context, position, result);
+    }
+    
+    private void doHapticFeedback(VibrationEffect effect) {
+        if (mVibrator != null && mVibrator.hasVibrator()) {
+            mVibrator.vibrate(effect);
+        }
     }
 
     public static void sendUpdateBroadcast(Context context, int position, int result) {
