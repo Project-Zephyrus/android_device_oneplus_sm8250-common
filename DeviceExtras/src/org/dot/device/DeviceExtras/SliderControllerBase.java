@@ -74,7 +74,6 @@ public abstract class SliderControllerBase {
             case KEY_SLIDER_BOTTOM:
                 result = processAction(mActions[0]);
                 notifySliderChange(context, result, 0);
-                doHapticFeedback(MODE_NORMAL_EFFECT);
                 break;
             case KEY_SLIDER_MIDDLE:
                 result = processAction(mActions[1]);
@@ -84,6 +83,7 @@ public abstract class SliderControllerBase {
             case KEY_SLIDER_TOP:
                 result = processAction(mActions[2]);
                 notifySliderChange(context, result, 2);
+                doHapticFeedback(MODE_NORMAL_EFFECT);
                 break;
         }
 
