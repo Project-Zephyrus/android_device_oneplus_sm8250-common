@@ -566,7 +566,6 @@ vendor/lib/soundfx/libeffectproxy.so
 vendor/lib/soundfx/libhwdap.so
 vendor/lib/soundfx/libswdap.so
 vendor/lib/soundfx/libswgamedap.so
-vendor/lib/soundfx/libswvqe.so
 vendor/lib/vendor.dolby.hardware.dms@2.0.so
 vendor/lib64/libdapparamstorage.so
 vendor/lib64/libdeccfg.so
@@ -579,7 +578,6 @@ vendor/lib64/soundfx/libeffectproxy.so
 vendor/lib64/soundfx/libhwdap.so
 vendor/lib64/soundfx/libswdap.so
 vendor/lib64/soundfx/libswgamedap.so
-vendor/lib64/soundfx/libswvqe.so
 vendor/lib64/vendor.dolby.hardware.dms@2.0.so
 vendor/lib64/vendor.dolby.hardware.dms@2.0-impl.so
 
