@@ -256,7 +256,6 @@
          The brightness values must be between 0 and 255 and be non-decreasing.
          This must be overridden in platform specific overlays -->
     <array name="config_autoBrightnessLcdBacklightValues">
-        <item>0</item>
         <item>4</item>
         <item>8</item>
         <item>12</item>
@@ -315,14 +314,9 @@
         <item>1478</item>
         <item>1676</item>
         <item>1854</item>
-        <item>2100</item>
-        <item>2292</item>
-        <item>2412</item>
-        <item>3020</item>
-        <item>3556</item>
-        <item>4095</item>
-        <item>4095</item>
-        <item>4095</item>
+        <item>2047</item>
+        <item>2047</item>
+        <item>2047</item>
     </array>
 
     <!-- An array of floats describing the screen brightness in nits corresponding to the backlight
