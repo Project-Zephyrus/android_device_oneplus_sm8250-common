@@ -37,8 +37,6 @@
 #define OP_DISPLAY_NOTIFY_PRESS 9
 #define OP_DISPLAY_AOD_MODE 8
 
-#define NATIVE_DISPLAY_P3 "/sys/class/drm/card0-DSI-1/native_display_p3_mode"
-#define NATIVE_DISPLAY_SRGB "/sys/class/drm/card0-DSI-1/native_display_srgb_color_mode"
 #define AUTH_STATUS_PATH  "/sys/class/drm/card0-DSI-1/auth_status"
 #define POWER_STATUS_PATH "/sys/class/drm/card0-DSI-1/power_status"
 
@@ -52,15 +50,6 @@ template <typename T>
 static void set(const std::string& path, const T& value) {
 	std::ofstream file(path);
 	file << value;
-}
-
-template <typename T>
-static T get(const std::string& path, const T& def) {
-	std::ifstream file(path);
-	T result;
-
-	file >> result;
-	return file.fail() ? def : result;
 }
 
 namespace android {
@@ -120,19 +109,11 @@ Return<void> BiometricsFingerprint::onFingerUp() {
 }
 
 Return<void> BiometricsFingerprint::onShowUdfpsOverlay() {
-    p3 = get(NATIVE_DISPLAY_P3, 0);
-    srgb = get(NATIVE_DISPLAY_SRGB, 0);
-    set(NATIVE_DISPLAY_SRGB, 0);
-    set(NATIVE_DISPLAY_P3, 0);
     return Void();
 }
 
 Return<void> BiometricsFingerprint::onHideUdfpsOverlay() {
     this->isCancelled = 0;
-    set(NATIVE_DISPLAY_P3, 0);
-    set(NATIVE_DISPLAY_SRGB, 0);
-    set(NATIVE_DISPLAY_P3, p3);
-    set(NATIVE_DISPLAY_SRGB, srgb);
     mVendorDisplayService->setMode(OP_DISPLAY_SET_DIM, 0);
     return Void();
 }
