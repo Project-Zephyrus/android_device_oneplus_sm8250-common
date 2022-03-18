@@ -44,10 +44,6 @@ public class Startup extends BroadcastReceiver {
         if (enabled) {
         restore(GameModeSwitch.getFile(), enabled);
                }
-        enabled = sharedPrefs.getBoolean(DeviceExtras.KEY_USB2_SWITCH, false);
-        if (enabled) {
-        restore(USB2FastChargeModeSwitch.getFile(), enabled);
-               }
         enabled = sharedPrefs.getBoolean(DeviceExtras.KEY_EDGE_TOUCH, true);
         if (enabled) {
         restore(EdgeTouchSwitch.getFile(), enabled);
