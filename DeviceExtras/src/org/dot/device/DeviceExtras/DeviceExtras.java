@@ -72,7 +72,6 @@ public class DeviceExtras extends PreferenceFragment
     public static final String KEY_GAME_SWITCH = "game_mode";
     public static final String KEY_HBM_SWITCH = "hbm";
     public static final String KEY_TOUCHSCREEN="touchscreen";
-    public static final String KEY_USB2_SWITCH = "usb2_fast_charge";
     public static final String KEY_VIBSTRENGTH = "vib_strength";
     public static final String KEY_EDGE_TOUCH = "edge_touch";
 
@@ -83,7 +82,6 @@ public class DeviceExtras extends PreferenceFragment
     private static TwoStatePreference mDCModeSwitch;
     private static TwoStatePreference mGameModeSwitch;
     private static TwoStatePreference mHBMModeSwitch;
-    private static TwoStatePreference mUSB2FastChargeModeSwitch;
     private static TwoStatePreference mEdgeTouchSwitch;
 
     private CustomSeekBarPreference mFpsInfoTextSizePreference;
@@ -155,12 +153,6 @@ public class DeviceExtras extends PreferenceFragment
 
         // Slider Preferences
         initNotificationSliderPreference();
-
-        // USB2 Force FastCharge
-        mUSB2FastChargeModeSwitch = (TwoStatePreference) findPreference(KEY_USB2_SWITCH);
-        mUSB2FastChargeModeSwitch.setEnabled(USB2FastChargeModeSwitch.isSupported());
-        mUSB2FastChargeModeSwitch.setChecked(USB2FastChargeModeSwitch.isCurrentlyEnabled(this.getContext()));
-        mUSB2FastChargeModeSwitch.setOnPreferenceChangeListener(new USB2FastChargeModeSwitch());
 
         // Vibrator
         mVibratorStrength = (VibratorStrengthPreference) findPreference(KEY_VIBSTRENGTH);

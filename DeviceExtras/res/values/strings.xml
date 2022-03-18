@@ -115,11 +115,6 @@
     <string name="game_mode_summary">Force enable over 300Hz sampling rate for all applications</string>
     <string name="game_mode_warning">May decrease battery life</string>
 
-    <!-- USB -->
-    <string name="usb_title">USB</string> 
-    <string name="usb2_fc_title">USB 2.0 fast charge</string>
-    <string name="usb2_fc_summary">Force fast charging of up to 900mA in USB 2.0 mode</string>
-
     <!-- Vibrator -->
     <string name="category_vibrator">Vibrator</string>
     <string name="vib_strength_title">System strength</string>
