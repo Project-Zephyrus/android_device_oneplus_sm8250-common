@@ -28,8 +28,4 @@
 
     <!-- Starting padding for a left-aligned quick status bar clock -->
     <dimen name="quick_status_bar_left_clock_starting_padding">@dimen/status_bar_padding_start</dimen>
-
-    <!-- UDFPS dialog extra padding to align with sensor -->
-    <dimen name="config_udfpsDialogExtraPadding">48px</dimen>
-    <dimen name="config_udfpsDialogExtraPaddingLandscape">38px</dimen>
 </resources>
