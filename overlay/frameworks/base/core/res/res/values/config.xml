@@ -361,7 +361,7 @@
          appended after the path string to interpret coordinates in dp instead of px units.
          Note that a physical cutout should be configured in pixels for the best results.
          -->
-    <string translatable="false" name="config_mainBuiltInDisplayCutout">M 99.5 68.5 M 66.95 68.5 C 66.95 77.129 70.382 85.414 76.484 91.516 C 82.586 97.618 90.871 101.05 99.5 101.05 C 108.129 101.05 116.414 97.618 122.516 91.516 C 128.618 85.414 132.05 77.129 132.05 68.5 C 132.05 59.871 128.618 51.586 122.516 45.484 C 116.414 39.382 108.129 35.95 99.5 35.95 C 90.871 35.95 82.586 39.382 76.484 45.484 C 70.382 51.586 66.95 59.871 66.95 68.5 Z @left</string>
+    <string translatable="false" name="config_mainBuiltInDisplayCutout">M 99.5 68.5 M 65.5 68.5 C 65.5 75.679 67.774 82.677 71.993 88.485 C 76.213 94.293 82.166 98.617 88.993 100.836 C 95.821 103.054 103.179 103.054 110.007 100.836 C 116.834 98.617 122.787 94.293 127.007 88.485 C 131.226 82.677 133.5 75.679 133.5 68.5 C 133.5 61.321 131.226 54.323 127.007 48.515 C 122.787 42.707 116.834 38.383 110.007 36.164 C 103.179 33.946 95.821 33.946 88.993 36.164 C 82.166 38.383 76.213 42.707 71.993 48.515 C 67.774 54.323 65.5 61.321 65.5 68.5 Z @left</string>
 
     <!-- Like config_mainBuiltInDisplayCutout, but this path is used to report the
          one single bounding rect per device edge to the app via
@@ -369,7 +369,7 @@
          appearance of the cutout as much as possible, and may be smaller than
          config_mainBuiltInDisplayCutout
          -->
-    <string translatable="false" name="config_mainBuiltInDisplayCutoutRectApproximation">M 0.0, 0.0 h 156 v 102.5 h -156 Z @left</string>
+    <string translatable="false" name="config_mainBuiltInDisplayCutoutRectApproximation">M 0.0, 0.0 h 156 v 104 h -156 Z @left</string>
 
     <!-- Whether the display cutout region of the main built-in display should be forced to
          black in software (to avoid aliasing or emulate a cutout that is not physically existent).
