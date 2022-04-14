@@ -1065,10 +1065,6 @@ vendor/lib64/libperfgluelayer.so|cc514ef935317cdc6c9de0749492337325f8ee22
 vendor/lib64/libperfioctl.so|f549443c16df6df58357c35566ec33ec4e1d394f
 
 # Power-off alarm - from LA.UM.9.12.r1-10800-SMxx50.0
--product/app/PowerOffAlarm/PowerOffAlarm.apk|bc906abd03e4a243201dde626b6580fd8a4f73ce
-system_ext/framework/vendor.qti.hardware.alarm-V1.0-java.jar|6508f5708221399eb8bd9754dc49bad32a911e27
-vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service|c3d1e677118b6ca1684b8a529ee07cc3d91276fa
-vendor/bin/power_off_alarm|e36ed077d45f0cb9368575c7a7e79f0292d51eaa
 vendor/lib64/libqti-perfd-client.so|6c937286822dd9b380cb43fe1103c5dbb3dbd6d8
 vendor/lib64/libqti-perfd.so|2aa015e0fdac09b65b680c1d5ce35291e06f9523
 vendor/lib64/libqti-util.so|2579b7fd8a246ea9ba69aac117867913d989f69b
@@ -1437,7 +1433,6 @@ vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so
 -vendor/lib/libfastcvopt.so|eb6e1052f12b45f2f651f1437e6072459648f2f3
 -vendor/lib64/libfastcvopt.so|0796b9092eb285d7689a8e6c4478a88a1d7e6e87
 vendor/lib/libfastcvdsp_stub.so|7f27cee24281bc9bf4f08c6100cc66bd650d8efb
--vendor/lib/libfastcvopt.so|92d28447ad22c0703235652a3feec168ba4dbd04
 vendor/lib/libscveCommon.so|4be56b846f71f4ba8032471abf9f02dc5b01810c
 vendor/lib/libscveCommon_stub.so|89e1a3d3302b6809ae4ca1d80f6c2e0cd3c3b752
 vendor/lib/libscveObjectSegmentation.so|b60b43377262ef6cc7882ff5cc49d35e4c516670
@@ -1445,7 +1440,6 @@ vendor/lib/libscveObjectSegmentation_stub.so|f1a139933c16c2fde367506fe0419c15684
 vendor/lib/libscveObjectTracker.so|26318c862d3d56596fe7208ebcc3ae1900f7d55f
 vendor/lib/libscveObjectTracker_stub.so|cafdeed8fa0d51672806038065cf4ce38d442b6b
 vendor/lib64/libfastcvdsp_stub.so|9813b36faa8029bdb358126c2996207fc7704d32
--vendor/lib64/libfastcvopt.so|479d0a3142becb3c5f4118ccc0e01ca665686061
 vendor/lib64/libscveCommon.so|237b6432dfb9d7b6ac5d5522591db0972755bb5b
 vendor/lib64/libscveCommon_stub.so|bb5dc4c59d04e35020f4422ae3e19c8cfd0d1537
 vendor/lib64/libscveObjectSegmentation.so|2fea995b4481d61dd1076fd429cef03f726a3f28
@@ -1464,8 +1458,6 @@ vendor/lib64/vendor.qti.hardware.soter@1.0.so|9e7805fbc289224be834e5523a63421817
 -vendor/lib64/libthermalclient.so|5717255cb13238f094b121066acc6f7b16335508
 vendor/bin/thermal-engine|13d6a468a70160c136fb1bd4a59aeacba353c802
 vendor/etc/thermal-engine.conf|c6c9312b7c7b52926cf7d0fc9bff933d90967100
--vendor/lib/libthermalclient.so|bd5ff431b13c028b3ae23a6ad746f0d67f3e0ee1
--vendor/lib64/libthermalclient.so|a0b077e784d6ea22e5e67281edf0348e39e66a6b
 
 # Time services - from LA.UM.9.12.r1-13300-SMxx50.QSSI12.0
 -vendor/app/TimeService/TimeService.apk|1a5f39aa2969feee50ff81ec870b5e2669ae515e
