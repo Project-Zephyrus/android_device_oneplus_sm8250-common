@@ -178,6 +178,9 @@ vendor.gralloc.disable_ubwc=0
 # Incremental FS
 ro.incremental.enable=true
 
+# Telephony
+telephony.active_modems.max_count=2
+
 # Keystore
 ro.hardware.keystore_desede=true
 
