@@ -763,7 +763,7 @@
       -->
         <item>542</item>
         <item>1910</item>
-        <item>90</item>
+        <item>95</item>
      </integer-array>
 
      <!-- How long it takes for the HW to start illuminating after the illumination is requested. -->
