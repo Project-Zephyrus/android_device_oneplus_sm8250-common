@@ -546,7 +546,7 @@ vendor/lib64/libdpmqmihal.so|67a75d6bd39f4bc825e14d21fa5b61e26ac82b22
 
 # Dolby
 system/lib64/vendor.dolby.hardware.dms@2.0.so
--system_ext/priv-app/DaxUI/DaxUI.apk|33ea5ad4269b04b020ebdbbcfb7ec56c36954b0e
+-system_ext/priv-app/DaxUI/DaxUI.apk|89e8ceabb19458b872eed0560a627eb2ff4c4dc4
 -system_ext/priv-app/daxService/daxService.apk
 system_ext/etc/permissions/privapp-com.dolby.daxappui.xml
 system_ext/etc/permissions/privapp-com.dolby.daxservice.xml
