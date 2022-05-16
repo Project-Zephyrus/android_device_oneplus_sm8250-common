@@ -37,6 +37,10 @@ const std::map<int32_t, TouchscreenGesture::GestureInfo> TouchscreenGesture::kGe
     {7, {246, "Letter W", "/proc/touchpanel/letter_w_enable"}},
     {8, {255, "Single Tap", "/proc/touchpanel/single_tap_enable"}},
     {9, {67, "Up arrow", "/proc/touchpanel/up_arrow_enable"}},
+    {10, {66, "Up Swipe", "/proc/touchpanel/up_swipe_enable"}},
+    {11, {63, "Left Swipe", "/proc/touchpanel/left_swipe_enable"}},
+    {12, {65, "Right Swipe", "/proc/touchpanel/right_swipe_enable"}},
+    {13, {64, "Down Swipe", "/proc/touchpanel/down_swipe_enable"}},
 };
 
 Return<void> TouchscreenGesture::getSupportedGestures(getSupportedGestures_cb resultCb) {
