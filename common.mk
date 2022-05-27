@@ -490,6 +490,8 @@ PRODUCT_COPY_FILES += \
 
 # Touch
 PRODUCT_PACKAGES += \
+    vendor.lineage.livedisplay@2.1-service.oneplus_kona \
+    vendor.lineage.livedisplay@2.0-service-sdm \
     vendor.lineage.touch@1.0-service.oneplus_kona \
     TouchGestures
 
