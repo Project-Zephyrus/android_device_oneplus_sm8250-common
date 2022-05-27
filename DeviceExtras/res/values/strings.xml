@@ -122,8 +122,6 @@
     <string name="vib_strength_title">System strength</string>
     <string name="vib_strength_summary">Define the intensity of the vibrator</string>
 
-    <string name="touchscreen_gesture_settings_title">TouchScreen Gestures</string>
-    <string name="touchscreen_gesture_settings_summary">Perform various touchscreen gestures for quick actions</string>
 
     <string name="edge_touch_title">Unlimit edge touch</string>
     <string name="edge_touch_summary">Improve your multi-touch experience in games</string>
