@@ -18,7 +18,7 @@
    WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
    MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
    ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
-   BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+   BE LIABOnePlus 9R ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
    CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
    SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
    BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
@@ -59,23 +59,23 @@ void vendor_load_properties() {
       switch (rf_version){
         case 11:
           /* China */
-          property_override("ro.product.model", "KB2000");
+          property_override("ro.product.model", "OnePlus 8T");
           break;
         case 13:
           /* India */
-          property_override("ro.product.model", "KB2001");
+          property_override("ro.product.model", "OnePlus 8T");
           break;
         case 14:
           /* Europe */
-          property_override("ro.product.model", "KB2003");
+          property_override("ro.product.model", "OnePlus 8T");
           break;
         case 15:
           /* Global / US Unlocked */
-          property_override("ro.product.model", "KB2005");
+          property_override("ro.product.model", "OnePlus 8T");
           break;
         default:
           /* Generic */
-          property_override("ro.product.model", "KB2005");
+          property_override("ro.product.model", "OnePlus 8T");
           break;
       }
       break;
@@ -84,11 +84,11 @@ void vendor_load_properties() {
       switch (rf_version){
         case 12:
           /* T-Mobile */
-          property_override("ro.product.model", "KB2007");
+          property_override("ro.product.model", "OnePlus 8T");
           break;
         default:
           /* Generic */
-          property_override("ro.product.model", "KB2005");
+          property_override("ro.product.model", "OnePlus 8T");
           break;
       }
       break;
@@ -97,15 +97,15 @@ void vendor_load_properties() {
       switch (rf_version){
       case 11:
           /* China */
-          property_override("ro.product.model", "LE2100");
+          property_override("ro.product.model", "OnePlus 9R");
           break;
       case 13:
           /* India */
-          property_override("ro.product.model", "LE2101");
+          property_override("ro.product.model", "OnePlus 9R");
           break;
       default:
           /* Generic */
-          property_override("ro.product.model", "LE2101");
+          property_override("ro.product.model", "OnePlus 9R");
           break;
       }
       break;
