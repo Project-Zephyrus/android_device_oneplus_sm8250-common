@@ -61,15 +61,12 @@ public class DeviceExtras extends PreferenceFragment
 
     public static final String KEY_SETTINGS_PREFIX = "device_setting_";
 
-    public static final String KEY_AUTO_HBM_SWITCH = "auto_hbm";
-    public static final String KEY_AUTO_HBM_THRESHOLD = "auto_hbm_threshold";
     public static final String KEY_DOZE = "advanced_doze_settings";
     public static final String KEY_FPS_INFO = "fps_info";
     public static final String KEY_FPS_INFO_POSITION = "fps_info_position";
     public static final String KEY_FPS_INFO_COLOR = "fps_info_color";
     public static final String KEY_FPS_INFO_TEXT_SIZE = "fps_info_text_size";
     public static final String KEY_GAME_SWITCH = "game_mode";
-    public static final String KEY_HBM_SWITCH = "hbm";
     public static final String KEY_TOUCHSCREEN="touchscreen";
     public static final String KEY_VIBSTRENGTH = "vib_strength";
     public static final String KEY_EDGE_TOUCH = "edge_touch";
@@ -77,9 +74,7 @@ public class DeviceExtras extends PreferenceFragment
     private static ListPreference mFpsInfoPosition;
     private static ListPreference mFpsInfoColor;
     private static SwitchPreference mFpsInfo;
-    private static TwoStatePreference mAutoHBMSwitch;
     private static TwoStatePreference mGameModeSwitch;
-    private static TwoStatePreference mHBMModeSwitch;
     private static TwoStatePreference mEdgeTouchSwitch;
 
     private CustomSeekBarPreference mFpsInfoTextSizePreference;
@@ -102,17 +97,6 @@ public class DeviceExtras extends PreferenceFragment
             startActivity(intent);
             return true;
         });
-
-        // HBM
-        mHBMModeSwitch = (TwoStatePreference) findPreference(KEY_HBM_SWITCH);
-        mHBMModeSwitch.setEnabled(HBMModeSwitch.isSupported());
-        mHBMModeSwitch.setChecked(PreferenceManager.getDefaultSharedPreferences(getContext()).getBoolean(DeviceExtras.KEY_HBM_SWITCH, false));
-        mHBMModeSwitch.setOnPreferenceChangeListener(this);
-
-        // AutoHBM
-        mAutoHBMSwitch = (TwoStatePreference) findPreference(KEY_AUTO_HBM_SWITCH);
-        mAutoHBMSwitch.setChecked(PreferenceManager.getDefaultSharedPreferences(getContext()).getBoolean(DeviceExtras.KEY_AUTO_HBM_SWITCH, false));
-        mAutoHBMSwitch.setOnPreferenceChangeListener(this);
 
         // FPS
         mFpsInfo = (SwitchPreference) findPreference(KEY_FPS_INFO);
@@ -153,14 +137,6 @@ public class DeviceExtras extends PreferenceFragment
         }
     }
 
-    public static boolean isHBMModeService(Context context) {
-        return PreferenceManager.getDefaultSharedPreferences(context).getBoolean(DeviceExtras.KEY_HBM_SWITCH, false);
-    }
-
-    public static boolean isAUTOHBMEnabled(Context context) {
-        return PreferenceManager.getDefaultSharedPreferences(context).getBoolean(DeviceExtras.KEY_AUTO_HBM_SWITCH, false);
-    }
-
     private void initNotificationSliderPreference() {
         registerPreferenceListener(Constants.NOTIF_SLIDER_USAGE_KEY);
         registerPreferenceListener(Constants.NOTIF_SLIDER_ACTION_TOP_KEY);
@@ -181,30 +157,12 @@ public class DeviceExtras extends PreferenceFragment
     public void onResume() {
         super.onResume();
         final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this.getContext());
-        mHBMModeSwitch.setChecked(HBMModeSwitch.isCurrentlyEnabled(this.getContext()));
         mFpsInfo.setChecked(isFPSOverlayRunning());
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (preference == mAutoHBMSwitch) {
-            Boolean enabled = (Boolean) newValue;
-            SharedPreferences.Editor prefChange = PreferenceManager.getDefaultSharedPreferences(getContext()).edit();
-            prefChange.putBoolean(KEY_AUTO_HBM_SWITCH, enabled).commit();
-            FileUtils.enableService(getContext());
-            return true;
-        } else if (preference == mHBMModeSwitch) {
-            Boolean enabled = (Boolean) newValue;
-            FileUtils.writeValue(HBMModeSwitch.getFile(), enabled ? "5" : "0");
-            Intent hbmIntent = new Intent(this.getContext(),
-                    org.dot.device.DeviceExtras.HBMModeService.class);
-            if (enabled) {
-                this.getContext().startService(hbmIntent);
-            } else {
-                this.getContext().stopService(hbmIntent);
-            }
-            return true;
-          } else if (preference == mFpsInfo) {
+        if (preference == mFpsInfo) {
             boolean enabled = (Boolean) newValue;
             Intent fpsinfo = new Intent(this.getContext(),
                     org.dot.device.DeviceExtras.FPSInfoService.class);

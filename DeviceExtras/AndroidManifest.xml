@@ -90,27 +90,6 @@
             </intent-filter>
         </service>
 
-        <!-- HBM Service -->
-        <service 
-            android:name=".HBMModeService"
-            android:exported="false" />
-
-        <!-- Auto HBM service -->
-        <service
-            android:name=".AutoHBMService"
-            android:exported="false" />
-
-        <!-- HBM tile -->
-        <service
-            android:name=".HBMModeTileService"
-            android:icon="@drawable/ic_hbm_mode"
-            android:label="@string/hbm_mode_title"
-            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
-            <intent-filter>
-                <action android:name="android.service.quicksettings.action.QS_TILE" />
-            </intent-filter>
-        </service>
-
         <!-- Doze service -->
         <service
             android:name=".doze.DozeService"

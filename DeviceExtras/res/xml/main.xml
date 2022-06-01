@@ -84,29 +84,6 @@
                     android:targetClass="org.dot.device.DeviceExtras.DozeSettingsActivity" />
         </Preference>
 
-        <SwitchPreference
-            android:key="hbm"
-            android:icon="@drawable/ic_hbm_mode"
-            android:title="@string/hbm_mode_title"
-            android:summary="@string/hbm_mode_summary"
-            android:defaultValue="false" />
-
-        <SwitchPreference
-            android:key="auto_hbm"
-            android:icon="@drawable/ic_autohbm_mode"
-            android:title="@string/auto_hbm_title"
-            android:summary="@string/auto_hbm_summary" />
-
-        <org.dot.device.DeviceExtras.AutoHBMThresholdPreference
-            android:key="auto_hbm_threshold"
-            android:icon="@drawable/ic_autohbm_threshold"
-            android:title="@string/auto_hbm_threshold_title"
-            android:summary="@string/auto_hbm_threshold_summary" />
-			
-        <Preference
-            android:icon="@drawable/ic_info_outline"
-            android:summary="@string/hbm_mode_warning" 
-            android:persistent="false" />
     </PreferenceCategory>
 
     <PreferenceCategory
