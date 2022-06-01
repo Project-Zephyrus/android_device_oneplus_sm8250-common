@@ -33,10 +33,6 @@ public class Startup extends BroadcastReceiver {
 
         boolean enabled = false;
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
-        enabled = sharedPrefs.getBoolean(DeviceExtras.KEY_HBM_SWITCH, false);
-        if (enabled) {
-        restore(HBMModeSwitch.getFile(), enabled);
-               }
         enabled = sharedPrefs.getBoolean(DeviceExtras.KEY_FPS_INFO, false);
         if (enabled) {
             context.startService(new Intent(context, FPSInfoService.class));
