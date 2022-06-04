@@ -190,6 +190,11 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/alexa/default-permissions-com.quicinc.voice.activation.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/default-permissions-com.quicinc.voice.activation.xml \
     $(LOCAL_PATH)/configs/alexa/privapp-permissions-com.quicinc.voice.activation.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-com.quicinc.voice.activation.xml \
     $(LOCAL_PATH)/configs/alexa/qvaconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qvaconfig.xml
+    
+# Dolby
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/dolby/dax-default.xml:$(TARGET_COPY_OUT_ODM)/etc/dolby/dax-default.xml \
+    $(LOCAL_PATH)/configs/dolby/media_codecs_dolby_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_dolby_audio.xml
 
 # Bluetooth
 PRODUCT_PACKAGES += \
