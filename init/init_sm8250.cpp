@@ -18,7 +18,7 @@
    WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
    MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
    ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
-   BE LIABOnePlus 9R ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+   BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
    CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
    SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
    BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
@@ -52,62 +52,18 @@ void property_override(char const prop[], char const value[]) {
 
 void vendor_load_properties() {
   int project_name = stoi(android::base::GetProperty("ro.boot.project_name", ""));
-  int rf_version = stoi(android::base::GetProperty("ro.boot.rf_version", ""));
   switch(project_name){
     case 19805:
       /* OnePlus 8T */
-      switch (rf_version){
-        case 11:
-          /* China */
           property_override("ro.product.model", "OnePlus 8T");
-          break;
-        case 13:
-          /* India */
-          property_override("ro.product.model", "OnePlus 8T");
-          break;
-        case 14:
-          /* Europe */
-          property_override("ro.product.model", "OnePlus 8T");
-          break;
-        case 15:
-          /* Global / US Unlocked */
-          property_override("ro.product.model", "OnePlus 8T");
-          break;
-        default:
-          /* Generic */
-          property_override("ro.product.model", "OnePlus 8T");
-          break;
-      }
       break;
     case 20809:
       /* OnePlus 8T T-Mobile */
-      switch (rf_version){
-        case 12:
-          /* T-Mobile */
           property_override("ro.product.model", "OnePlus 8T");
-          break;
-        default:
-          /* Generic */
-          property_override("ro.product.model", "OnePlus 8T");
-          break;
-      }
       break;
     case 20828:
       /* OnePlus 9R */
-      switch (rf_version){
-      case 11:
-          /* China */
           property_override("ro.product.model", "OnePlus 9R");
-          break;
-      case 13:
-          /* India */
-          property_override("ro.product.model", "OnePlus 9R");
-          break;
-      default:
-          /* Generic */
-          property_override("ro.product.model", "OnePlus 9R");
-          break;
-      }
       break;
   }
 }
