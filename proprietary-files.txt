@@ -557,7 +557,6 @@ system_ext/etc/sysconfig/config-com.dolby.daxappui.xml
 system_ext/etc/sysconfig/config-com.dolby.daxservice.xml
 system_ext/etc/sysconfig/hiddenapi-com.dolby.daxservice.xml
 vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service
-odm/etc/dolby/dax-default.xml
 vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc
 vendor/lib/libdapparamstorage.so
 vendor/lib/libdeccfg.so
