@@ -183,6 +183,13 @@ PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
     frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml
+    
+# Alexa Hands Free Stuff
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/alexa/amzn.alexa.properties:$(TARGET_COPY_OUT_SYSTEM)/etc/amzn.alexa.properties \
+    $(LOCAL_PATH)/configs/alexa/default-permissions-com.quicinc.voice.activation.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/default-permissions-com.quicinc.voice.activation.xml \
+    $(LOCAL_PATH)/configs/alexa/privapp-permissions-com.quicinc.voice.activation.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-com.quicinc.voice.activation.xml \
+    $(LOCAL_PATH)/configs/alexa/qvaconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qvaconfig.xml
 
 # Bluetooth
 PRODUCT_PACKAGES += \
