@@ -36,4 +36,9 @@
 
     <!-- How much into a DisplayCutout's bounds we can go, on each side -->
     <dimen name="display_cutout_margin_consumption">68px</dimen>
+    
+    <dimen name="qs_header_row_min_height">140px</dimen>
+    
+    <!-- Starting padding for a left-aligned status bar clock -->
+    <dimen name="status_bar_left_clock_starting_padding">@dimen/status_bar_padding_start</dimen>
 </resources>

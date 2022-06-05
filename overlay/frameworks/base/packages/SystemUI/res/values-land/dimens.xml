@@ -21,4 +21,6 @@
 
     <!-- the padding on the end of the statusbar -->
     <dimen name="status_bar_padding_end">48px</dimen>
+    
+    <dimen name="qs_header_row_min_height">48dp</dimen>
 </resources>
