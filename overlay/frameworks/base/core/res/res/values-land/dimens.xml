@@ -17,6 +17,6 @@
 -->
 <resources>
     <!-- Height of area above QQS where battery/time go -->
-    <dimen name="quick_qs_offset_height">104px</dimen>
+    <dimen name="quick_qs_offset_height">132px</dimen>
     <dimen name="status_bar_height">104px</dimen>
 </resources>
