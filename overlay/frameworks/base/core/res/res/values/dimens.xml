@@ -27,4 +27,8 @@
 
     <!-- Height of area above QQS where battery/time go -->
     <dimen name="quick_qs_offset_height">132px</dimen>
+    
+    <!-- The default height of the status bar used in {@link SystemBarUtils#getStatusBarHeight} to
+         calculate the status bar height. -->
+    <dimen name="status_bar_height_default">@dimen/status_bar_height</dimen>
 </resources>
