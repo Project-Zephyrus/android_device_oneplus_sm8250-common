@@ -975,6 +975,8 @@ vendor/lib64/unnhal-acc-hta.so
 vendor/lib64/unnhal-acc-hvx.so
 
 # NFC
+vendor/bin/hw/vendor.nxp.hardware.nfc@2.0-service
+vendor/etc/init/vendor.nxp.hardware.nfc@2.0-service.rc
 vendor/etc/permissions/com.nxp.mifare.xml
 vendor/etc/libese-nxp.conf
 vendor/etc/libnfc-mtp-SN100.conf
@@ -996,6 +998,8 @@ vendor/etc/nfc_config_type.conf
 vendor/etc/sn100u_nfcon.pnscr
 vendor/lib/libsn100u_fw.so
 vendor/lib64/libchrome.so
+vendor/lib64/nfc_nci.nqx.default.hw.so
+vendor/lib64/vendor.nxp.hardware.nfc@2.0.so
 
 # OMX - from LA.UM.9.12.r1-13300-SMxx50.QSSI12.0
 vendor/lib/libAlacSwDec.so|cb41b0945e57b349e6aa476cdac4315ee13a2def
@@ -1082,6 +1086,7 @@ vendor/lib64/libqti-util.so|2579b7fd8a246ea9ba69aac117867913d989f69b
 # Power-off alarm - from LA.UM.9.12.r1-13300-SMxx50.QSSI12.0
 -product/app/PowerOffAlarm/PowerOffAlarm.apk|6e3ba805cfbeb0db590f988891448345cc3698ba
 vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service|6446a38537ceb4afdc2cdbbd7645e2616842ba6a
+system_ext/framework/vendor.qti.hardware.alarm-V1.0-java.jar
 vendor/bin/power_off_alarm|71e47e029ad444494c286dcd655f534c033a7ab1
 vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc|a03a9a1c818595b19272ea6ffb466e23a7fc3b05
 vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so|c2b6cd79a2fdc28ea10dd3d357ffd14235222a7d
