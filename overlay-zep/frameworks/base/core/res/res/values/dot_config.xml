@@ -1,0 +1,68 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- Paths to the libraries that contain device specific key handlers -->
+    <string-array name="config_deviceKeyHandlerLibs" translatable="false">
+        <item>/system/system_ext/priv-app/TouchGestures/TouchGestures.apk</item>
+        <item>/system/priv-app/DeviceExtras/DeviceExtras.apk</item>
+    </string-array>
+
+    <!-- Names of the key handler classes -->
+    <string-array name="config_deviceKeyHandlerClasses" translatable="false">
+        <item>com.android.touch.gestures.KeyHandler</item>
+        <item>org.dot.device.DeviceExtras.KeyHandler</item>
+    </string-array>
+
+    <!-- Whether key handler sends intent when changing slider position -->
+    <string name="config_alertSliderIntent">org.dot.device.DeviceExtras.UPDATE_SLIDER_POSITION</string>
+
+    <!-- Whether device has physical tri state switch -->
+    <bool name="config_hasAlertSlider">true</bool>
+
+    <!-- The location of the devices physical tri state switch
+         0: Left side
+         1: Right side -->
+    <integer name="config_alertSliderLocation">1</integer>
+
+    <!-- Whether device has warp charging support -->
+    <bool name="config_hasWarpCharger">true</bool>
+
+     <!-- If true, the display will be shifted around in ambient mode. -->
+    <bool name="config_enableBurnInProtection">true</bool>
+
+    <!-- Flag indicating whether we should enable the adaptive sleep.-->
+    <bool name="config_adaptive_sleep_available">true</bool>
+
+    <!-- Specify custom blanking delay of the display -->
+    <integer name="config_screen_off_delay">0</integer>
+
+    <!-- Do the battery/notification LEDs support pulsing?
+         Used to decide if we show pulse settings -->
+    <bool name="config_ledCanPulse">false</bool>
+
+    <!-- Whether the device supports Smart Pixels -->
+    <bool name="config_enableSmartPixels">true</bool>
+
+    <!-- Whether device has a notch -->
+    <bool name="config_haveNotch">true</bool>
+
+    <!-- If not zero, limits the internal screen recorder's framerate to the set value. -->
+    <integer name="config_screenRecorderMaxFramerate">60</integer>
+
+    <!-- Defines custom Vendor sensor for pocket detection. -->
+    <string name="config_pocketJudgeVendorSensorName">oneplus.sensor.pocket</string>
+
+    <!-- Controls the navigation bar interaction mode:
+         0: 3 button mode (back, home, overview buttons)
+         1: 2 button mode (back, home buttons + swipe up for overview)
+         2: gestures only for back, home and overview -->
+    <integer name="config_navBarInteractionMode">2</integer>
+
+    <!-- Adaptive charging sysfs node and value for suspend/resume charging -->
+    <string name="config_adaptiveChargingSysfsNode" translatable="false">/sys/class/power_supply/battery/input_suspend</string>
+    <string name="config_adaptiveChargingSuspendValue" translatable="false">1</string>
+    <string name="config_adaptiveChargingResumeValue" translatable="false">0</string>
+
+    <!-- Path to fast charging status file to detect whether an oem fast charger is active -->
+    <string name="config_oemFastChargerStatusPath" translatable="false">/sys/class/power_supply/battery/fastchg_status</string>
+
+</resources>

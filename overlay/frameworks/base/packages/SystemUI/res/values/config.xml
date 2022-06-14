@@ -20,6 +20,20 @@
 <!-- These resources are around just to allow their values to be customized
      for different hardware and product builds. -->
 <resources>
+    <!-- Respect drawable/rounded.xml intrinsic size for multiple radius corner path customization -->
+    <bool name="config_roundedCornerMultipleRadius">true</bool>
+
     <!-- Doze: does this device support STATE_DOZE?  -->
     <bool name="doze_display_state_supported">true</bool>
+
+    <!-- Should we vibrate on an icon animation of the shelf. This should only be active if the
+     vibrator is capable of subtle vibrations -->
+    <bool name="config_vibrateOnIconAnimation">true</bool>
+    <integer name="config_udfpsEnrollProgressBar" translatable="false">100</integer>
+
+    <!-- Whether to pulse onFingerDown actions while in AOD. -->
+    <bool name="config_pulseOnFingerDownInAod">true</bool>
+
+    <!-- Location on the screen of the center of the Physical Power Button. -->
+    <dimen name="physical_power_button_center_screen_location_y">1212px</dimen>
 </resources>

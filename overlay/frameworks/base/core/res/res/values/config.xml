@@ -17,6 +17,388 @@
 <!-- These resources are around just to allow their values to be customized
      for different hardware and product builds.  Do not translate. -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Flag indicating whether the we should enable the automatic brightness in Settings.
+         Software implementation will be used if config_hardware_auto_brightness_available is not set -->
+    <bool name="config_automatic_brightness_available">true</bool>
+
+    <!-- Array of hysteresis constraint values for brightening, represented as tenths of a
+         percent. The length of this array is assumed to be one greater than
+         config_ambientThresholdLevels. The brightening threshold is calculated as
+         lux * (1.0f + CONSTRAINT_VALUE). When the current lux is higher than this threshold,
+         the screen brightness is recalculated. See the config_ambientThresholdLevels
+         description for how the constraint value is chosen. -->
+    <integer-array name="config_ambientBrighteningThresholds">
+        <item>600</item>
+        <item>300</item>
+    </integer-array>
+
+    <!-- Array of hysteresis constraint values for darkening, represented as tenths of a
+         percent. The length of this array is assumed to be one greater than
+         config_ambientThresholdLevels. The darkening threshold is calculated as
+         lux * (1.0f - CONSTRAINT_VALUE). When the current lux is lower than this threshold,
+         the screen brightness is recalculated. See the config_ambientThresholdLevels
+         description for how the constraint value is chosen. -->
+    <integer-array name="config_ambientDarkeningThresholds">
+        <item>600</item>
+        <item>300</item>
+    </integer-array>
+
+    <!-- Array of screen brightness threshold values. This is used for determining hysteresis
+         constraint values by calculating the index to use for lookup and then setting the
+         constraint value to the corresponding value of the array. The new brightening hysteresis
+         constraint value is the n-th element of config_screenBrighteningThresholds, and the new
+         darkening hysteresis constraint value is the n-th element of
+         config_screenDarkeningThresholds.
+         The (zero-based) index is calculated as follows: (MAX is the largest index of the array)
+         condition                       calculated index
+         value < level[0]                0
+         level[n] <= value < level[n+1]  n+1
+         level[MAX] <= value             MAX+1 -->
+    <integer-array name="config_ambientThresholdLevels">
+        <item>10</item>
+    </integer-array>
+
+    <!-- Array of hysteresis constraint values for brightening, represented as tenths of a
+         percent. The length of this array is assumed to be one greater than
+         config_screenThresholdLevels. The brightening threshold is calculated as
+         screenBrightness * (1.0f + CONSTRAINT_VALUE). When the new screen brightness is higher
+         than this threshold, it is applied. See the config_screenThresholdLevels description for
+         how the constraint value is chosen. -->
+    <array name="config_screenBrighteningThresholds">
+        <item>0</item>
+    </array>
+
+    <!-- Array of hysteresis constraint values for darkening, represented as tenths of a
+         percent. The length of this array is assumed to be one greater than
+         config_screenThresholdLevels. The darkening threshold is calculated as
+         screenBrightness * (1.0f - CONSTRAINT_VALUE). When the new screen brightness is lower than
+         this threshold, it is applied. See the config_screenThresholdLevels description for how
+         the constraint value is chosen. -->
+    <array name="config_screenDarkeningThresholds">
+        <item>0</item>
+    </array>
+
+    <!-- Array of light sensor lux values to define our levels for auto backlight brightness support.
+         The N entries of this array define N + 1 control points as follows:
+         (1-based arrays)
+
+         Point 1:            (0, value[1]):             lux <= 0
+         Point 2:     (level[1], value[2]):  0        < lux <= level[1]
+         Point 3:     (level[2], value[3]):  level[2] < lux <= level[3]
+         ...
+         Point N+1: (level[N], value[N+1]):  level[N] < lux
+
+         The control points must be strictly increasing.  Each control point
+         corresponds to an entry in the brightness backlight values arrays.
+         For example, if lux == level[1] (first element of the levels array)
+         then the brightness will be determined by value[2] (second element
+         of the brightness values array).
+
+         Spline interpolation is used to determine the auto-brightness
+         backlight values for lux levels between these control points.
+
+         Must be overridden in platform specific overlays -->
+    <integer-array name="config_autoBrightnessLevels">
+        <item>1</item>
+        <item>4</item>
+        <item>12</item>
+        <item>20</item>
+        <item>28</item>
+        <item>47</item>
+        <item>63</item>
+        <item>86</item>
+        <item>150</item>
+        <item>160</item>
+        <item>220</item>
+        <item>270</item>
+        <item>360</item>
+        <item>420</item>
+        <item>510</item>
+        <item>620</item>
+        <item>1000</item>
+        <item>2000</item>
+        <item>3100</item>
+        <item>5000</item>
+        <item>8000</item>
+        <item>12000</item>
+        <item>16000</item>
+        <item>20000</item>
+    </integer-array>
+
+    <!-- Array of desired screen brightness in nits corresponding to the lux values
+         in the config_autoBrightnessLevels array. As with config_screenBrightnessMinimumNits and
+         config_screenBrightnessMaximumNits, the display brightness is defined as the measured
+         brightness of an all-white image.
+
+         If this is defined then:
+            - config_autoBrightnessLcdBacklightValues should not be defined
+            - config_screenBrightnessNits must be defined
+            - config_screenBrightnessBacklight must be defined
+
+         This array should have size one greater than the size of the config_autoBrightnessLevels
+         array. The brightness values must be non-negative and non-decreasing. This must be
+         overridden in platform specific overlays -->
+    <array name="config_autoBrightnessDisplayValuesNits">
+        <item>2.0487</item>
+        <item>4.8394</item>
+        <item>17.2619</item>
+        <item>39.2619</item>
+        <item>50.671</item>
+        <item>72.95</item>
+        <item>80.46</item>
+        <item>84.38</item>
+        <item>89.51</item>
+        <item>100.34</item>
+        <item>102.21</item>
+        <item>109.48</item>
+        <item>114.19</item>
+        <item>123.86</item>
+        <item>129.18</item>
+        <item>138.07</item>
+        <item>145.62</item>
+        <item>168.84</item>
+        <item>234.9</item>
+        <item>280</item>
+        <item>320</item>
+        <item>360</item>
+        <item>405</item>
+        <item>450</item>
+        <item>500</item>
+    </array>
+
+    <!-- Array of output values for LCD backlight corresponding to the lux values
+         in the config_autoBrightnessLevels array.  This array should have size one greater
+         than the size of the config_autoBrightnessLevels array.
+         The brightness values must be between 0 and 255 and be non-decreasing.
+         This must be overridden in platform specific overlays -->
+    <array name="config_autoBrightnessLcdBacklightValues">
+        <item>0</item>
+        <item>63</item>
+        <item>127</item>
+        <item>191</item>
+        <item>255</item>
+        <item>319</item>
+        <item>383</item>
+        <item>447</item>
+        <item>511</item>
+        <item>575</item>
+        <item>639</item>
+        <item>703</item>
+        <item>767</item>
+        <item>831</item>
+        <item>895</item>
+        <item>959</item>
+        <item>1023</item>
+        <item>1087</item>
+        <item>1151</item>
+        <item>1215</item>
+        <item>1279</item>
+        <item>1343</item>
+        <item>1407</item>
+        <item>1471</item>
+        <item>1535</item>
+        <item>1599</item>
+        <item>1663</item>
+        <item>1727</item>
+        <item>1791</item>
+        <item>1855</item>
+        <item>1919</item>
+        <item>1983</item>
+        <item>2047</item>
+        <item>2111</item>
+        <item>2175</item>
+        <item>2239</item>
+        <item>2303</item>
+        <item>2367</item>
+        <item>2431</item>
+        <item>2495</item>
+        <item>2559</item>
+        <item>2623</item>
+        <item>2687</item>
+        <item>2751</item>
+        <item>2815</item>
+        <item>2879</item>
+        <item>2943</item>
+        <item>3007</item>
+        <item>3071</item>
+        <item>3135</item>
+        <item>3199</item>
+        <item>3263</item>
+        <item>3327</item>
+        <item>3391</item>
+        <item>3455</item>
+        <item>3519</item>
+        <item>3583</item>
+        <item>3647</item>
+        <item>3711</item>
+        <item>3775</item>
+        <item>3839</item>
+        <item>3903</item>
+        <item>3967</item>
+        <item>4031</item>
+        <item>4095</item>
+        <item>4159</item>
+        <item>4223</item>
+        <item>4287</item>
+        <item>4351</item>
+        <item>4415</item>
+        <item>4479</item>
+        <item>4543</item>
+        <item>4607</item>
+        <item>4671</item>
+        <item>4735</item>
+        <item>4799</item>
+        <item>4863</item>
+        <item>4927</item>
+        <item>4991</item>
+        <item>5055</item>
+        <item>5119</item>
+        <item>5183</item>
+        <item>5247</item>
+        <item>5311</item>
+        <item>5375</item>
+        <item>5439</item>
+        <item>5503</item>
+        <item>5567</item>
+        <item>5631</item>
+        <item>5695</item>
+        <item>5759</item>
+        <item>5823</item>
+        <item>5887</item>
+        <item>5951</item>
+        <item>6015</item>
+        <item>6079</item>
+        <item>6143</item>
+        <item>6207</item>
+        <item>6271</item>
+        <item>6335</item>
+        <item>6399</item>
+        <item>6463</item>
+        <item>6527</item>
+        <item>6591</item>
+        <item>6655</item>
+        <item>6719</item>
+        <item>6783</item>
+        <item>6847</item>
+        <item>6911</item>
+        <item>6975</item>
+        <item>7039</item>
+        <item>7103</item>
+        <item>7167</item>
+        <item>7231</item>
+        <item>7295</item>
+        <item>7359</item>
+        <item>7423</item>
+        <item>7487</item>
+        <item>7551</item>
+        <item>7615</item>
+        <item>7679</item>
+        <item>7743</item>
+        <item>7807</item>
+        <item>7871</item>
+        <item>7935</item>
+        <item>7999</item>
+        <item>8063</item>
+        <item>8127</item>
+        <item>8191</item>
+    </array>
+
+    <!-- An array of floats describing the screen brightness in nits corresponding to the backlight
+         values in the config_screenBrightnessBacklight array.  On OLED displays these  values
+         should be measured with an all white image while the display is in the fully on state.
+         Note that this value should *not* reflect the maximum brightness value for any high
+         brightness modes but only the maximum brightness value obtainable in a sustainable manner.
+
+         This array should be equal in size to config_screenBrightnessBacklight -->
+    <array name="config_screenBrightnessNits">
+        <item>1</item>
+        <item>500</item>
+    </array>
+
+    <!-- An array describing the screen's backlight values corresponding to the brightness
+         values in the config_screenBrightnessNits array.
+
+         This array should be equal in size to config_screenBrightnessBacklight. -->
+    <integer-array name="config_screenBrightnessBacklight">
+        <item>1</item>
+        <item>255</item>
+    </integer-array>
+
+    <!-- Maximum screen brightness setting allowed by the power manager.
+         The user is forbidden from setting the brightness above this level. -->
+    <integer name="config_screenBrightnessSettingMaximum">255</integer>
+
+    <!-- Screen brightness used to dim the screen when the user activity
+         timeout expires.  May be less than the minimum allowed brightness setting
+         that can be set by the user. -->
+    <integer name="config_screenBrightnessDim">6</integer>
+
+    <!-- Default screen brightness setting.
+         Must be in the range specified by minimum and maximum. -->
+    <integer name="config_screenBrightnessSettingDefault">46</integer>
+
+    <!-- Minimum screen brightness setting allowed by the power manager.
+         The user is forbidden from setting the brightness below this level. -->
+    <integer name="config_screenBrightnessSettingMinimum">2</integer>
+
+    <!-- Stability requirements in milliseconds for accepting a new brightness level.  This is used
+         for debouncing the light sensor.  Different constants are used to debounce the light sensor
+         when adapting to brighter or darker environments.  This parameter controls how quickly
+         brightness changes occur in response to an observed change in light level that exceeds the
+         hysteresis threshold. -->
+    <integer name="config_autoBrightnessBrighteningLightDebounce">2000</integer>
+    <integer name="config_autoBrightnessDarkeningLightDebounce">3000</integer>
+
+    <!-- The bounding path of the cutout region of the main built-in display.
+         Must either be empty if there is no cutout region, or a string that is parsable by
+         {@link android.util.PathParser}.
+
+         The path is assumed to be specified in display coordinates with pixel units and in
+         the display's native orientation, with the origin of the coordinate system at the
+         center top of the display.
+
+         To facilitate writing device-independent emulation overlays, the marker `@dp` can be
+         appended after the path string to interpret coordinates in dp instead of px units.
+         Note that a physical cutout should be configured in pixels for the best results.
+         -->
+  <string translatable="false" name="config_mainBuiltInDisplayCutout">M -525 79.5 A 41.5 41.5 0 0 1 -608 79.5 A 41.5 41.5 0 0 1 -525 79.5 Z M -608,0 L -525,0 Z M -720,0 L -720,121 Z</string>
+
+    <!-- Like config_mainBuiltInDisplayCutout, but this path is used to report the
+         one single bounding rect per device edge to the app via
+         {@link DisplayCutout#getBoundingRect}. Note that this path should try to match the visual
+         appearance of the cutout as much as possible, and may be smaller than
+         config_mainBuiltInDisplayCutout
+         -->
+    <string translatable="false" name="config_mainBuiltInDisplayCutoutRectApproximation">
+        M 0,0
+        H 224
+        V 121
+        H 0
+        Z
+        @left
+    </string>
+
+    <!-- Whether the display cutout region of the main built-in display should be forced to
+         black in software (to avoid aliasing or emulate a cutout that is not physically existent).
+         -->
+    <bool name="config_fillMainBuiltInDisplayCutout">true</bool>
+
+    <!-- The default refresh rate for a given device. Change this value to set a higher default
+         refresh rate. If the hardware composer on the device supports display modes with a higher
+         refresh rate than the default value specified here, the framework may use those higher
+         refresh rate modes if an app chooses one by setting preferredDisplayModeId or calling
+         setFrameRate().
+         If a non-zero value is set for config_defaultPeakRefreshRate, then
+         config_defaultRefreshRate may be set to 0, in which case the value set for
+         config_defaultPeakRefreshRate will act as the default frame rate. -->
+    <integer name="config_defaultRefreshRate">0</integer>
+
+    <!-- The default peak refresh rate for a given device. Change this value if you want to prevent
+         the framework from using higher refresh rates, even if display modes with higher refresh
+         rates are available from hardware composer. Only has an effect if the value is
+         non-zero. -->
+    <integer name="config_defaultPeakRefreshRate">120</integer>
+
     <!-- If this is true, the screen will come on when you unplug usb/power/whatever. -->
     <bool name="config_unplugTurnsOnScreen">true</bool>
 
@@ -26,13 +408,6 @@
 
     <!-- Set to true to add links to Cell Broadcast app from Settings and MMS app. -->
     <bool name="config_cellBroadcastAppLinks">true</bool>
-
-    <!-- MMS user agent string -->
-    <string name="config_mms_user_agent" translatable="false">Android-Mms/2.0</string>
-
-    <!-- MMS user agent prolfile url -->
-    <string name="config_mms_user_agent_profile_url" translatable="false"
-            >http://www.google.com/oha/rdf/ua-profile-kila.xml</string>
 
      <!-- This string array should be overridden by the device to present a list of network
          attributes.  This is used by the connectivity manager to decide which networks can coexist
@@ -93,7 +468,7 @@
          This flag controls whether the {@link Display#FLAG_SUPPORTS_PROTECTED_BUFFERS}
          flag is set for wifi displays.
     -->
-    <bool name="config_wifiDisplaySupportsProtectedBuffers">true</bool>
+    <bool name="config_wifiDisplaySupportsProtectedBuffers">false</bool>
 
     <!-- Indicate whether closing the lid causes the device to go to sleep and opening
          it causes the device to wake up.
@@ -232,23 +607,61 @@
 
     <!-- Vibrator pattern for feedback about a long screen/key press -->
     <integer-array name="config_longPressVibePattern">
-        <item>0</item>
-        <item>10</item>
+        <item>1</item>
+        <item>20</item>
+        <item>21</item>
     </integer-array>
 
     <!-- Vibrator pattern for feedback about touching a virtual key -->
     <integer-array name="config_virtualKeyVibePattern">
-        <item>0</item>
         <item>10</item>
+        <item>20</item>
+        <item>30</item>
     </integer-array>
 
     <!-- Vibrator pattern for a very short but reliable vibration for soft keyboard tap -->
     <integer-array name="config_keyboardTapVibePattern">
-        <item>10</item>
+        <item>40</item>
     </integer-array>
+
+    <integer-array name="config_defaultNotificationVibePattern">
+        <item>0</item>
+        <item>180</item>
+        <item>80</item>
+        <item>180</item>
+    </integer-array>
+
+    <integer-array name="config_notificationFallbackVibePattern">
+        <item>0</item>
+        <item>100</item>
+        <item>150</item>
+        <item>100</item>
+    </integer-array>
+
+    <bool name="config_enableHapticTextHandle">true</bool>
 
     <!-- Default list of files pinned by the Pinner Service -->
     <string-array translatable="false" name="config_defaultPinnerServiceFiles">
+        <item>"/system/framework/arm64/boot-framework.oat"</item>
+        <item>"/system/framework/framework.jar"</item>
+        <item>"/system/framework/oat/arm64/services.odex"</item>
+        <item>"/system/framework/services.jar"</item>
+        <item>"/apex/com.android.art/javalib/core-oj.jar"</item>
+        <item>"/apex/com.android.art/javalib/core-libart.jar"</item>
+        <item>"/apex/com.android.media/javalib/updatable-media.jar"</item>
+        <item>"/system_ext/priv-app/SystemUI/SystemUI.apk"</item>
+        <item>"/system_ext/priv-app/SystemUI/oat/arm64/SystemUI.odex"</item>
+        <item>"/system/bin/surfaceflinger"</item>
+    </string-array>
+
+    <!-- Should the pinner service pin the Camera application? -->
+    <bool name="config_pinnerCameraApp">false</bool>
+
+    <!-- Should the pinner service pin the Home application? -->
+    <bool name="config_pinnerHomeApp">true</bool>
+
+    <!-- List of files pinned by the Pinner Service with the JIT Zygote boot image b/119800099 -->
+    <string-array translatable="false" name="config_jitzygoteBootImagePinnerServiceFiles">
         <item>"/system/framework/framework.jar"</item>
         <item>"/system/framework/services.jar"</item>
         <item>"/apex/com.android.art/javalib/core-oj.jar"</item>
@@ -257,12 +670,6 @@
         <item>"/system_ext/priv-app/SystemUI/SystemUI.apk"</item>
         <item>"/system/bin/surfaceflinger"</item>
     </string-array>
-
-    <!-- Should the pinner service pin the Camera application? -->
-    <bool name="config_pinnerCameraApp">true</bool>
-
-    <!-- Should the pinner service pin the Home application? -->
-    <bool name="config_pinnerHomeApp">true</bool>
 
     <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
          autodetected from the Configuration. -->
@@ -296,12 +703,112 @@
         <item>0:2:15</item> <!-- ID0:Fingerprint:Strong -->
     </string-array>
 
-    <!-- Indicate available ColorDisplayManager.COLOR_MODE_xxx. -->
+    <!-- The default journal mode to use use when Write-Ahead Logging is not active.
+         Choices are: OFF, DELETE, TRUNCATE, PERSIST and MEMORY.
+         PERSIST may improve performance by reducing how often journal blocks are
+         reallocated (compared to truncation) resulting in better data block locality
+         and less churn of the storage media.
+         The PERSIST mode results in data persisting in the journal beyond the life of
+         a transaction, so it interacts poorly with SECURE_DELETE. -->
+    <string name="db_default_journal_mode">MEMORY</string>
+
+    <!-- The database synchronization mode when using the default journal mode.
+         FULL is safest and preserves durability at the cost of extra fsyncs.
+         NORMAL also preserves durability in non-WAL modes and uses checksums to ensure
+         integrity although there is a small chance that an error might go unnoticed.
+         Choices are: FULL, NORMAL, OFF. -->
+    <string name="db_default_sync_mode">OFF</string>
+
+    <!-- The database synchronization mode when using Write-Ahead Logging.
+         From https://www.sqlite.org/pragma.html#pragma_synchronous:
+         WAL mode is safe from corruption with synchronous=NORMAL, and probably DELETE mode is safe
+         too on modern filesystems. WAL mode is always consistent with synchronous=NORMAL, but WAL
+         mode does lose durability. A transaction committed in WAL mode with
+         synchronous=NORMAL might roll back following a power loss or system crash.
+         Transactions are durable across application crashes regardless of the synchronous setting
+         or journal mode. The synchronous=NORMAL setting is a good choice for most applications
+         running in WAL mode.
+         Choices are: FULL, NORMAL, OFF. -->
+    <string name="db_wal_sync_mode">OFF</string>
+
+    <!-- List supported color modes. -->
     <integer-array name="config_availableColorModes">
-        <item>0</item>
-        <item>256</item>
-        <item>257</item>
-        <item>258</item>
-        <item>259</item>
+        <item>0</item> <!-- COLOR_MODE_NATURAL -->
+        <item>1</item> <!-- COLOR_MODE_BOOSTED -->
+        <item>2</item> <!-- COLOR_MODE_SATURATED -->
     </integer-array>
+
+    <!-- The following two arrays specify which color space to use for display composition when a
+         certain color mode is active.
+         Composition color spaces are defined in android.view.Display.COLOR_MODE_xxx, and color
+         modes are defined in ColorDisplayManager.COLOR_MODE_xxx and
+         ColorDisplayManager.VENDOR_COLOR_MODE_xxx.
+         The color space COLOR_MODE_DEFAULT (0) lets the system select the most appropriate
+         composition color space for currently displayed content. Other values (e.g.,
+         COLOR_MODE_SRGB) override system selection; these other color spaces must be supported by
+         the device for for display composition.
+         If a color mode does not have a corresponding color space specified in this array, the
+         currently set composition color space will not be modified.-->
+    <integer-array name="config_displayCompositionColorModes">
+        <item>0</item> <!-- COLOR_MODE_NATURAL   -->
+        <item>1</item> <!-- COLOR_MODE_BOOSTED   -->
+        <item>2</item> <!-- COLOR_MODE_SATURATED -->
+    </integer-array>
+
+    <integer-array name="config_displayCompositionColorSpaces">
+        <item>9</item> <!-- COLOR_MODE_DISPLAY_P3 -->
+        <item>9</item> <!-- COLOR_MODE_DISPLAY_P3 -->
+        <item>0</item> <!-- COLOR_MODE_DEFAULT    -->
+    </integer-array>
+
+     <!-- The properties of a UDFPS sensor in pixels, in the order listed below: -->
+     <integer-array name="config_udfps_sensor_props" translatable="false" >
+      <!--
+        <item>sensorLocationX</item>
+        <item>sensorLocationY</item>
+        <item>sensorRadius</item>
+      -->
+        <item>717</item>
+        <item>2542</item>
+        <item>110</item>
+     </integer-array>
+
+     <!-- How long it takes for the HW to start illuminating after the illumination is requested. -->
+    <integer name="config_udfps_illumination_transition_ms">0</integer>
+
+    <!--  Whether Multiuser UI should be shown -->
+    <bool name="config_enableMultiUserUI">true</bool>
+    <!--  Maximum number of supported users -->
+    <integer name="config_multiuserMaximumUsers">4</integer>
+
+    <!-- Whether device supports increased touch sensitvity -->
+    <bool name="config_supportGloveMode">true</bool>
+
+    <!-- Slow brightness animation ramp rate in brightness units per second-->
+    <integer translatable="false" name="config_brightness_ramp_rate_slow">10</integer>
+    
+    <!-- Fast brightness animation ramp rate in brightness units per second-->
+    <integer translatable="false" name="config_brightness_ramp_rate_fast">104</integer>
+    
+    <!-- Light sensor event rate in milliseconds for automatic brightness control. -->
+    <integer name="config_autoBrightnessLightSensorRate">200</integer>
+
+    <!-- User activity timeout: Maximum screen dim duration as a percentage of screen off timeout.
+
+         This resource is similar to config_maximumScreenDimDuration but the maximum
+         screen dim duration is defined as a ratio of the overall screen off timeout
+         instead of as an absolute value in milliseconds.  This is useful for reducing
+         the dim duration when the screen off timeout is very short.
+
+         When computing the screen dim duration, the power manager uses the lesser
+         of the effective durations expressed by config_maximumScreenDimDuration and
+         config_maximumScreenDimRatio.
+
+         This value must be between 0% and 100%.  If the value is zero, the screen will not
+         dim before the device goes to sleep.
+    -->
+    <fraction name="config_maximumScreenDimRatio">25%</fraction>
+    
+    <!-- Whether the display blanks itself when transition from a doze to a non-doze state -->
+    <bool name="config_displayBlanksAfterDoze">false</bool>
 </resources>
