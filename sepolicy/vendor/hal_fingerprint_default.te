@@ -1,0 +1,4 @@
+allow hal_fingerprint_default default_prop:file { read };
+allow hal_fingerprint_default vendor_sysfs_battery_supply:dir { search open };
+allow hal_fingerprint_default default_prop:file { open };
+allow hal_fingerprint_default oem_file:dir { search };

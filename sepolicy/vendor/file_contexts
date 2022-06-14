@@ -1,9 +1,9 @@
 # Binaries
-/(vendor|system/vendor)/bin/dashd                      u:object_r:dashd_exec:s0
-/(vendor|system/vendor)/bin/opf-service                u:object_r:opf_exec:s0
-/(vendor|system/vendor)/bin/tri-state-key-calibrate    u:object_r:tri-state-key-calibrate_exec:s0
-/(vendor|system/vendor)/bin/vl53l1_daemon_main         u:object_r:vl53l1_daemon_main_exec:s0
-/(vendor|system/vendor)/bin/wlchgd                     u:object_r:wlchgd_exec:s0
+/(vendor|system/vendor)/bin/dashd                   u:object_r:dashd_exec:s0
+/(vendor|system/vendor)/bin/opf-service             u:object_r:opf_exec:s0
+/(vendor|system/vendor)/bin/tri-state-key_daemon    u:object_r:tri-state-key_daemon_exec:s0
+/(vendor|system/vendor)/bin/vl53l1_daemon_main      u:object_r:vl53l1_daemon_main_exec:s0
+/(vendor|system/vendor)/bin/wlchgd                  u:object_r:wlchgd_exec:s0
 
 # Block devices
 /dev/block/platform/soc/1d84000.ufshc/by-name/config             u:object_r:frp_block_device:s0
@@ -49,9 +49,8 @@
 
 # HALs
 /(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.3-service\.oneplus            u:object_r:hal_fingerprint_default_exec:s0
-/(vendor|system/vendor)/bin/hw/vendor\.lineage\.livedisplay@2\.1-service\.oneplus                          u:object_r:hal_lineage_livedisplay_qti_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.lineage\.powershare@1\.0-service\.oneplus                           u:object_r:hal_lineage_powershare_default_exec:s0
-/(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch@1\.0-service\.oneplus                                u:object_r:hal_lineage_touch_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch@1\.0-service\.oneplus_kona                           u:object_r:hal_lineage_touch_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.oneplus\.hardware\.camera@1\.0-service                              u:object_r:hal_cameraHIDL_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.oneplus\.hardware\.CameraMDMHIDL@1\.0-service                       u:object_r:hal_cameraHIDL_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.oneplus\.hardware\.display@1\.0-service                             u:object_r:hal_display_default_exec:s0
