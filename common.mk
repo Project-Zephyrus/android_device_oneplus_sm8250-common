@@ -175,6 +175,13 @@ PRODUCT_COPY_FILES += \
 # Authsecret
 PRODUCT_PACKAGES += \
     android.hardware.authsecret@1.0.vendor
+    
+# Alexa Hands Free Stuff
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/alexa/amzn.alexa.properties:$(TARGET_COPY_OUT_SYSTEM)/etc/amzn.alexa.properties \
+    $(LOCAL_PATH)/configs/alexa/default-permissions-com.quicinc.voice.activation.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/default-permissions-com.quicinc.voice.activation.xml \
+    $(LOCAL_PATH)/configs/alexa/privapp-permissions-com.quicinc.voice.activation.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-com.quicinc.voice.activation.xml \
+    $(LOCAL_PATH)/configs/alexa/qvaconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qvaconfig.xml
 
 # Bluetooth
 PRODUCT_PACKAGES += \

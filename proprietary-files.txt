@@ -46,6 +46,9 @@ vendor/lib/rfsa/adsp/libSuperSensor_skel.so
 vendor/lib/rfsa/adsp/libVDHexagonBlurless_v2_skel.so
 vendor/lib/rfsa/adsp/libvdsuperphoto_skel.so
 
+# Alexa Hands Free Stuff
+-system/priv-app/QualcommVoiceActivation/QualcommVoiceActivation.apk;PRESIGNED|1946fe3b1e3318c7c480c5d66f22f4197a02bc1f
+
 # ANT+
 system_ext/lib/com.qualcomm.qti.ant@1.0.so
 system_ext/lib64/com.qualcomm.qti.ant@1.0.so
@@ -537,6 +540,7 @@ vendor/lib/libgcs-ipc.so
 vendor/lib/libgcs-osal.so
 vendor/lib/libgcs.so
 vendor/lib/liblistensoundmodel2.so
+vendor/lib64/liblistensoundmodel2.so
 vendor/lib/libmulawdec.so
 vendor/lib/libsmwrapper.so
 
