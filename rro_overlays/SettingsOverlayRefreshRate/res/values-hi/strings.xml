@@ -15,6 +15,6 @@
 -->
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="peak_refresh_rate_summary" msgid="1527087897198455042">"कुछ कॉन्टेंट के लिए, यह अपने-आप ही रीफ़्रेश दर को 60 हर्ट्ज़ से बढ़ाकर 120 हर्ट्ज़ कर देता है. इसमें बैटरी ज़्यादा खर्च होती है."</string>
-    <string name="force_high_refresh_rate_toggle" msgid="5861514655252832828">"रीफ़्रेश दर को 120 हर्ट्ज़ पर सेट करें"</string>
+    <string name="peak_refresh_rate_summary" msgid="1527087897198455042">"कुछ कॉन्टेंट के लिए, यह अपने-आप ही रीफ़्रेश दर को 60 हर्ट्ज़ से बढ़ाकर 90/120 हर्ट्ज़ कर देता है. इसमें बैटरी ज़्यादा खर्च होती है."</string>
+    <string name="force_high_refresh_rate_toggle" msgid="5861514655252832828">"रीफ़्रेश दर को 90/120 हर्ट्ज़ पर सेट करें"</string>
 </resources>

@@ -21,9 +21,6 @@
      for different hardware and product builds. -->
 <resources>
 
-    <!-- Whether the device supports wireless charging or not -->
-    <bool name="config_deviceSupportsWirelessCharging">true</bool>
-
     <!-- Udfps vendor code -->
     <integer name="config_udfps_vendor_code">0</integer>
 

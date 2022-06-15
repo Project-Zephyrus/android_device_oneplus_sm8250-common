@@ -15,6 +15,6 @@
 -->
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="peak_refresh_rate_summary" msgid="1527087897198455042">"Tự động tăng tốc độ làm mới từ 60 lên 120 Hz đối với một số nội dung. Làm tăng mức sử dụng pin."</string>
-    <string name="force_high_refresh_rate_toggle" msgid="5861514655252832828">"Buộc làm mới ở tốc độ 120 Hz"</string>
+    <string name="peak_refresh_rate_summary" msgid="1527087897198455042">"Tự động tăng tốc độ làm mới từ 60 lên 90/120 Hz đối với một số nội dung. Làm tăng mức sử dụng pin."</string>
+    <string name="force_high_refresh_rate_toggle" msgid="5861514655252832828">"Buộc làm mới ở tốc độ 90/120 Hz"</string>
 </resources>

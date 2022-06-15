@@ -32,12 +32,7 @@
     <dimen name="keyguard_carrier_text_margin">@dimen/status_bar_padding_start</dimen>
 
     <!-- Margin on the right side of the system icon group on Keyguard. -->
-    <dimen name="system_icons_keyguard_padding_end">16px</dimen>
-
-    <!-- How much into a DisplayCutout's bounds we can go, on each side -->
-    <dimen name="display_cutout_margin_consumption">68px</dimen>
-    
-    <dimen name="qs_header_row_min_height">72px</dimen>
+    <dimen name="system_icons_keyguard_padding_end">@dimen/status_bar_padding_end</dimen>
     
     <!-- Starting padding for a left-aligned status bar clock -->
     <dimen name="status_bar_left_clock_starting_padding">@dimen/status_bar_padding_start</dimen>

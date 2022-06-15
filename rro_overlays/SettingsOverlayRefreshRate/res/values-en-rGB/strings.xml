@@ -15,6 +15,6 @@
 -->
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="peak_refresh_rate_summary" msgid="1527087897198455042">"Automatically raises the refresh rate from 60 to 120 Hz for some content. Increases battery usage."</string>
-    <string name="force_high_refresh_rate_toggle" msgid="5861514655252832828">"Force 120 Hz refresh rate"</string>
+    <string name="peak_refresh_rate_summary" msgid="1527087897198455042">"Automatically raises the refresh rate from 60 to 90/120 Hz for some content. Increases battery usage."</string>
+    <string name="force_high_refresh_rate_toggle" msgid="5861514655252832828">"Force 90/120 Hz refresh rate"</string>
 </resources>

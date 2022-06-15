@@ -15,6 +15,6 @@
 -->
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="peak_refresh_rate_summary" msgid="1527087897198455042">"အကြောင်းအရာအချို့အတွက် ပြန်လည်စတင်နှုန်းကို ၆၀ မှ ၁၂၀ Hz သို့ အလိုအလျောက် တိုးပေးသည်။ ဘက်ထရီ အသုံးပြုမှု တိုးလာပါမည်။"</string>
-    <string name="force_high_refresh_rate_toggle" msgid="5861514655252832828">"၁၂၀ Hz ပြန်ဖွင့်မှုနှုန်းကို မဖြစ်မနေအသုံးပြုရန်"</string>
+    <string name="peak_refresh_rate_summary" msgid="1527087897198455042">"အကြောင်းအရာအချို့အတွက် ပြန်လည်စတင်နှုန်းကို ၆၀ မှ ၉၀/၁၂၀ Hz သို့ အလိုအလျောက် တိုးပေးသည်။ ဘက်ထရီ အသုံးပြုမှု တိုးလာပါမည်။"</string>
+    <string name="force_high_refresh_rate_toggle" msgid="5861514655252832828">"၉၀/၁၂၀ Hz ပြန်ဖွင့်မှုနှုန်းကို မဖြစ်မနေအသုံးပြုရန်"</string>
 </resources>

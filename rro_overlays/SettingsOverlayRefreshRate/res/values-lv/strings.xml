@@ -15,6 +15,6 @@
 -->
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="peak_refresh_rate_summary" msgid="1527087897198455042">"Noteikta satura atsvaidzināšanas biežums tiek automātiski palielināts no 60 līdz 120 Hz. Tas palielina akumulatora lietojumu."</string>
-    <string name="force_high_refresh_rate_toggle" msgid="5861514655252832828">"Piespiedu 120 Hz atsvaidzināšanas biežums"</string>
+    <string name="peak_refresh_rate_summary" msgid="1527087897198455042">"Noteikta satura atsvaidzināšanas biežums tiek automātiski palielināts no 60 līdz 90/120 Hz. Tas palielina akumulatora lietojumu."</string>
+    <string name="force_high_refresh_rate_toggle" msgid="5861514655252832828">"Piespiedu 90/120 Hz atsvaidzināšanas biežums"</string>
 </resources>

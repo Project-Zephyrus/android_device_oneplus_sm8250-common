@@ -15,6 +15,6 @@
 -->
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="peak_refresh_rate_summary" msgid="1527087897198455042">"ავტომატურად ზრდის განახლების სიხშირეს 60-დან და 120 ჰც-მდე გარკვეული კონტენტისთვის. გაზრდის ბატარეის მოხმარებას."</string>
-    <string name="force_high_refresh_rate_toggle" msgid="5861514655252832828">"იძულებითი 120 ჰც განახლების სიხშირე"</string>
+    <string name="peak_refresh_rate_summary" msgid="1527087897198455042">"ავტომატურად ზრდის განახლების სიხშირეს 60-დან და 90/120 ჰც-მდე გარკვეული კონტენტისთვის. გაზრდის ბატარეის მოხმარებას."</string>
+    <string name="force_high_refresh_rate_toggle" msgid="5861514655252832828">"იძულებითი 90/120 ჰც განახლების სიხშირე"</string>
 </resources>

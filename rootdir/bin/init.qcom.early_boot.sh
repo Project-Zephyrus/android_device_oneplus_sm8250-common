@@ -76,7 +76,7 @@ function set_density_by_fb() {
         if [ $fb_width -ge 1600 ]; then
            setprop vendor.display.lcd_density 640
         elif [ $fb_width -ge 1440 ]; then
-           setprop vendor.display.lcd_density 560
+           setprop vendor.display.lcd_density 600
         elif [ $fb_width -ge 1080 ]; then
            setprop vendor.display.lcd_density 480
         elif [ $fb_width -ge 720 ]; then

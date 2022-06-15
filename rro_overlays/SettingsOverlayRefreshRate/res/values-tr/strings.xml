@@ -15,6 +15,6 @@
 -->
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="peak_refresh_rate_summary" msgid="1527087897198455042">"Bazı içerikler için yenileme hızını otomatik olarak 60 Hz\'den 120 Hz\'e yükseltir. Pil kullanımını artırır."</string>
-    <string name="force_high_refresh_rate_toggle" msgid="5861514655252832828">"120 Hz yenileme hızına zorla"</string>
+    <string name="peak_refresh_rate_summary" msgid="1527087897198455042">"Bazı içerikler için yenileme hızını otomatik olarak 60 Hz\'den 90/120 Hz\'e yükseltir. Pil kullanımını artırır."</string>
+    <string name="force_high_refresh_rate_toggle" msgid="5861514655252832828">"90/120 Hz yenileme hızına zorla"</string>
 </resources>

@@ -15,6 +15,6 @@
 -->
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="peak_refresh_rate_summary" msgid="1527087897198455042">"Зарим контентын сэргээх хурдыг автоматаар 60-с 120 Гц болгож өсгөнө. Батарей ашиглалтыг нэмэгдүүлнэ."</string>
-    <string name="force_high_refresh_rate_toggle" msgid="5861514655252832828">"120 Гц-н хүчээр сэргээх хурд"</string>
+    <string name="peak_refresh_rate_summary" msgid="1527087897198455042">"Зарим контентын сэргээх хурдыг автоматаар 60-с 90/120 Гц болгож өсгөнө. Батарей ашиглалтыг нэмэгдүүлнэ."</string>
+    <string name="force_high_refresh_rate_toggle" msgid="5861514655252832828">"90/120 Гц-н хүчээр сэргээх хурд"</string>
 </resources>

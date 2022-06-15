@@ -15,6 +15,6 @@
 -->
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="peak_refresh_rate_summary" msgid="1527087897198455042">"Awtomatikong itinataas sa 120 Hz mula sa 60 Hz ang refresh rate para sa ilang content. Mas lumalakas ang paggamit ng baterya."</string>
-    <string name="force_high_refresh_rate_toggle" msgid="5861514655252832828">"Pilitin ang 120 Hz na rate ng pag-refresh"</string>
+    <string name="peak_refresh_rate_summary" msgid="1527087897198455042">"Awtomatikong itinataas sa 90/120 Hz mula sa 60 Hz ang refresh rate para sa ilang content. Mas lumalakas ang paggamit ng baterya."</string>
+    <string name="force_high_refresh_rate_toggle" msgid="5861514655252832828">"Pilitin ang 90/120 Hz na rate ng pag-refresh"</string>
 </resources>

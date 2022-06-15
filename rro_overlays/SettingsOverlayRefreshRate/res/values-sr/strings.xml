@@ -15,6 +15,6 @@
 -->
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="peak_refresh_rate_summary" msgid="1527087897198455042">"Аутоматски подиже учесталост освежавања са 60 на 120 Hz за одређени садржај. Повећава потрошњу батерије."</string>
-    <string name="force_high_refresh_rate_toggle" msgid="5861514655252832828">"Наметни учесталост освежавања од 120 Hz"</string>
+    <string name="peak_refresh_rate_summary" msgid="1527087897198455042">"Аутоматски подиже учесталост освежавања са 60 на 90/120 Hz за одређени садржај. Повећава потрошњу батерије."</string>
+    <string name="force_high_refresh_rate_toggle" msgid="5861514655252832828">"Наметни учесталост освежавања од 90/120 Hz"</string>
 </resources>

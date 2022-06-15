@@ -15,6 +15,6 @@
 -->
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="peak_refresh_rate_summary" msgid="1527087897198455042">"Hiermee wordt de vernieuwingssnelheid automatisch verhoogd van 60 naar 120 Hz voor bepaalde content. Het batterijgebruik neemt toe."</string>
-    <string name="force_high_refresh_rate_toggle" msgid="5861514655252832828">"Vernieuwingssnelheid van 120 Hz afdwingen"</string>
+    <string name="peak_refresh_rate_summary" msgid="1527087897198455042">"Hiermee wordt de vernieuwingssnelheid automatisch verhoogd van 60 naar 90/120 Hz voor bepaalde content. Het batterijgebruik neemt toe."</string>
+    <string name="force_high_refresh_rate_toggle" msgid="5861514655252832828">"Vernieuwingssnelheid van 90/120 Hz afdwingen"</string>
 </resources>

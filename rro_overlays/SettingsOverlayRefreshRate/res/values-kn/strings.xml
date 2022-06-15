@@ -15,6 +15,6 @@
 -->
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="peak_refresh_rate_summary" msgid="1527087897198455042">"ಕೆಲವು ವಿಷಯಗಳಿಗೆ ರಿಫ್ರೆಶ್ ರೇಟ್ ಅನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ 60 ರಿಂದ 120 ಕ್ಕೆ ಏರಿಸುತ್ತದೆ. ಬ್ಯಾಟರಿ ಬಳಕೆಯನ್ನು ಹೆಚ್ಚಿಸುತ್ತದೆ."</string>
-    <string name="force_high_refresh_rate_toggle" msgid="5861514655252832828">"120 Hz ರಿಫ್ರೆಶ್ ರೇಟ್ ಅನ್ನು ಅನ್ವಯಿಸಿ"</string>
+    <string name="peak_refresh_rate_summary" msgid="1527087897198455042">"ಕೆಲವು ವಿಷಯಗಳಿಗೆ ರಿಫ್ರೆಶ್ ರೇಟ್ ಅನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ 60 ರಿಂದ 90/120 ಕ್ಕೆ ಏರಿಸುತ್ತದೆ. ಬ್ಯಾಟರಿ ಬಳಕೆಯನ್ನು ಹೆಚ್ಚಿಸುತ್ತದೆ."</string>
+    <string name="force_high_refresh_rate_toggle" msgid="5861514655252832828">"90/120 Hz ರಿಫ್ರೆಶ್ ರೇಟ್ ಅನ್ನು ಅನ್ವಯಿಸಿ"</string>
 </resources>

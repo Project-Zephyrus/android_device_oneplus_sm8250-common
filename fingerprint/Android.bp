@@ -31,7 +31,7 @@ cc_binary {
         "android.hardware.biometrics.fingerprint@2.1",
         "android.hardware.biometrics.fingerprint@2.2",
         "android.hardware.biometrics.fingerprint@2.3",
-        "//device/oneplus/instantnoodlep:vendor.oneplus.fingerprint.extension@1.0",
-        "//device/oneplus/instantnoodlep:vendor.oneplus.hardware.display@1.0",
+        "//device/oneplus/sm8250-common:vendor.oneplus.fingerprint.extension@1.0",
+        "//device/oneplus/sm8250-common:vendor.oneplus.hardware.display@1.0",
     ],
 }

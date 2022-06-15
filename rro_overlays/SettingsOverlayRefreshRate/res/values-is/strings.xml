@@ -15,6 +15,6 @@
 -->
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="peak_refresh_rate_summary" msgid="1527087897198455042">"Breytir endurnýjunarhraða sjálfkrafa úr 60 í 120 Hz fyrir sumt efni. Eykur rafhlöðunotkun."</string>
-    <string name="force_high_refresh_rate_toggle" msgid="5861514655252832828">"Þvinga fram 120 Hz endurnýjunarhraða"</string>
+    <string name="peak_refresh_rate_summary" msgid="1527087897198455042">"Breytir endurnýjunarhraða sjálfkrafa úr 60 í 90/120 Hz fyrir sumt efni. Eykur rafhlöðunotkun."</string>
+    <string name="force_high_refresh_rate_toggle" msgid="5861514655252832828">"Þvinga fram 90/120 Hz endurnýjunarhraða"</string>
 </resources>

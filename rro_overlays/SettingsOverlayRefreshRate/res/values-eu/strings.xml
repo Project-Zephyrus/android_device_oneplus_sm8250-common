@@ -15,6 +15,6 @@
 -->
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="peak_refresh_rate_summary" msgid="1527087897198455042">"Automatikoki igotzen du freskatze-abiadura 60 Hz-tik 120 Hz-ra zenbait edukitarako. Bateria-erabilera luzatzen du."</string>
-    <string name="force_high_refresh_rate_toggle" msgid="5861514655252832828">"Aplikatu 120 Hz-ko freskatze-abiadura"</string>
+    <string name="peak_refresh_rate_summary" msgid="1527087897198455042">"Automatikoki igotzen du freskatze-abiadura 60 Hz-tik 90/120 Hz-ra zenbait edukitarako. Bateria-erabilera luzatzen du."</string>
+    <string name="force_high_refresh_rate_toggle" msgid="5861514655252832828">"Aplikatu 90/120 Hz-ko freskatze-abiadura"</string>
 </resources>

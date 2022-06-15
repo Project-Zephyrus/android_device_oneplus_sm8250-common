@@ -15,6 +15,6 @@
 -->
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="peak_refresh_rate_summary" msgid="1527087897198455042">"เพิ่มอัตราการรีเฟรชจาก 60 เป็น 120 Hz โดยอัตโนมัติสำหรับเนื้อหาบางรายการ เพิ่มการใช้งานแบตเตอรี่"</string>
-    <string name="force_high_refresh_rate_toggle" msgid="5861514655252832828">"บังคับอัตราการรีเฟรชเป็น 120 เฮิร์ตซ์"</string>
+    <string name="peak_refresh_rate_summary" msgid="1527087897198455042">"เพิ่มอัตราการรีเฟรชจาก 60 เป็น 90/120 Hz โดยอัตโนมัติสำหรับเนื้อหาบางรายการ เพิ่มการใช้งานแบตเตอรี่"</string>
+    <string name="force_high_refresh_rate_toggle" msgid="5861514655252832828">"บังคับอัตราการรีเฟรชเป็น 90/120 เฮิร์ตซ์"</string>
 </resources>

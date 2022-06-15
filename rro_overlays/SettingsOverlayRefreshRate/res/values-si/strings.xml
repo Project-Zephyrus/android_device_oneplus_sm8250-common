@@ -15,6 +15,6 @@
 -->
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="peak_refresh_rate_summary" msgid="1527087897198455042">"සමහර අන්තර්ගත සඳහා නැවුම් කිරීමේ අනුපාතය හර්ට්ස් 60 සිට 120 දක්වා ස්වයංක්‍රියව ඉහළ නංවයි. බැටරි භාවිතය වැඩි කරයි."</string>
-    <string name="force_high_refresh_rate_toggle" msgid="5861514655252832828">"120 Hz යළි නැවුම් කිරීමේ අනුපාතය බල කරන්න"</string>
+    <string name="peak_refresh_rate_summary" msgid="1527087897198455042">"සමහර අන්තර්ගත සඳහා නැවුම් කිරීමේ අනුපාතය හර්ට්ස් 60 සිට 90/120 දක්වා ස්වයංක්‍රියව ඉහළ නංවයි. බැටරි භාවිතය වැඩි කරයි."</string>
+    <string name="force_high_refresh_rate_toggle" msgid="5861514655252832828">"90/120 Hz යළි නැවුම් කිරීමේ අනුපාතය බල කරන්න"</string>
 </resources>

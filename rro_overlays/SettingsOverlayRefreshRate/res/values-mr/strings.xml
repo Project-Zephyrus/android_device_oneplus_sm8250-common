@@ -15,6 +15,6 @@
 -->
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="peak_refresh_rate_summary" msgid="1527087897198455042">"काही आशयासाठी रिफ्रेश रेट ६० ते १२० Hz पर्यंत आपोआप वाढवते. बॅटरी वापर वाढवते."</string>
-    <string name="force_high_refresh_rate_toggle" msgid="5861514655252832828">"फोर्स १२० Hz रिफ्रेश रेट"</string>
+    <string name="peak_refresh_rate_summary" msgid="1527087897198455042">"काही आशयासाठी रिफ्रेश रेट ६० ते ९०/१२० Hz पर्यंत आपोआप वाढवते. बॅटरी वापर वाढवते."</string>
+    <string name="force_high_refresh_rate_toggle" msgid="5861514655252832828">"फोर्स ९०/१२० Hz रिफ्रेश रेट"</string>
 </resources>

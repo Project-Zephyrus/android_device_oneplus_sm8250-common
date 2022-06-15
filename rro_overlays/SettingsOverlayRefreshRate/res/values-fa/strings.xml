@@ -15,6 +15,6 @@
 -->
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="peak_refresh_rate_summary" msgid="1527087897198455042">"به‌طور خودکار سرعت بازخوانی را برای بعضی محتواها، از ۶۰ هرتز تا ۱۲۰ هرتز بالا می‌برد. مصرف باتری را افزایش می‌دهد."</string>
-    <string name="force_high_refresh_rate_toggle" msgid="5861514655252832828">"اجباری کردن نرخ بازخوانی ۱۲۰ هرتز"</string>
+    <string name="peak_refresh_rate_summary" msgid="1527087897198455042">"به‌طور خودکار نرخ تازه‌سازی را برای برخی از محتواها از 60 به 90/120 هرتز افزایش می‌دهد. مصرف باتری را افزایش می دهد."</string>
+    <string name="force_high_refresh_rate_toggle" msgid="5861514655252832828">"اجباری نرخ تجدید 90/120 هرتز"</string>
 </resources>

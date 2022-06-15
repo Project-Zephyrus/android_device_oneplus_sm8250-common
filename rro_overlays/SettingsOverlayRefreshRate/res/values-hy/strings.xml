@@ -15,5 +15,5 @@
 -->
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="peak_refresh_rate_summary" msgid="1527087897198455042">"Որոշակի բովանդակության համար թարմացման հաճախականությունը 60-ից կդառնա 120 Հց։ Երկարացնում է մարտկոցի օգտագործման ժամանակը։"</string>
-    <string name="force_high_refresh_rate_toggle" msgid="5861514655252832828">"Պարտադիր միացնել 120 Հց թարմացման հաճախականությունը"</string></resources>
+    <string name="peak_refresh_rate_summary" msgid="1527087897198455042">"Որոշակի բովանդակության համար թարմացման հաճախականությունը 60-ից կդառնա 90/120 Հց։ Երկարացնում է մարտկոցի օգտագործման ժամանակը։"</string>
+    <string name="force_high_refresh_rate_toggle" msgid="5861514655252832828">"Պարտադիր միացնել 90/120 Հց թարմացման հաճախականությունը"</string></resources>

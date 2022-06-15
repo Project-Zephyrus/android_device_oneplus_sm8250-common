@@ -15,6 +15,6 @@
 -->
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="peak_refresh_rate_summary" msgid="1527087897198455042">"சில உள்ளடக்கத்திற்குப் புதுப்பிக்கும் விகிதத்தை 60லிருந்து 120 Hzக்குத் தானாகவே உயர்த்தும். இதனால் பேட்டரி உபயோகம் அதிகரிக்கும்."</string>
-    <string name="force_high_refresh_rate_toggle" msgid="5861514655252832828">"ரெஃப்ரெஷ் விகிதம்: Force 120 Hz"</string>
+    <string name="peak_refresh_rate_summary" msgid="1527087897198455042">"சில உள்ளடக்கத்திற்குப் புதுப்பிக்கும் விகிதத்தை 60லிருந்து 90/120 Hzக்குத் தானாகவே உயர்த்தும். இதனால் பேட்டரி உபயோகம் அதிகரிக்கும்."</string>
+    <string name="force_high_refresh_rate_toggle" msgid="5861514655252832828">"ரெஃப்ரெஷ் விகிதம்: Force 90/120 Hz"</string>
 </resources>
