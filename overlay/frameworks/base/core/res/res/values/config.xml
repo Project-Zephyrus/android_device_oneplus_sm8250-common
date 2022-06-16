@@ -664,10 +664,10 @@
     <bool name="config_supportGloveMode">true</bool>
 
     <!-- Slow brightness animation ramp rate in brightness units per second-->
-    <integer translatable="false" name="config_brightness_ramp_rate_slow">10</integer>
+    <integer translatable="false" name="config_brightness_ramp_rate_slow">15</integer>
     
     <!-- Fast brightness animation ramp rate in brightness units per second-->
-    <integer translatable="false" name="config_brightness_ramp_rate_fast">104</integer>
+    <integer translatable="false" name="config_brightness_ramp_rate_fast">156</integer>
     
     <!-- Light sensor event rate in milliseconds for automatic brightness control. -->
     <integer name="config_autoBrightnessLightSensorRate">200</integer>
