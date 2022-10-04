@@ -441,7 +441,8 @@ PRODUCT_PACKAGES += \
 
 # Remove unwanted packages
 PRODUCT_PACKAGES += \
-    RemovePackages
+    RemovePackages \
+    TouchGestures
 
 # RIL
 PRODUCT_PACKAGES += \
